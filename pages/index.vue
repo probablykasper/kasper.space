@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <nuxt-link to='/work'>
+      <nuxt-link to="/work">
         WORK
       </nuxt-link>
     </div>
