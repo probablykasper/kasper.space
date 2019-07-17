@@ -6,7 +6,7 @@
 
 <style>
 html {
-  font-family: Arial, sans-serif;
+  font-family: 'Jost*', serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
