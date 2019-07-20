@@ -1,5 +1,6 @@
 {
-  "name": "v6.kasper.space",
+  "name": "kasper.space",
+  "description": "My personal website.",
   "version": "1.0.0",
   "author": "kasper.space",
   "private": true,
@@ -7,7 +8,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint-fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "precommit": "npm run lint",
-    "start": "nuxt",
+    "start": "nuxt --hostname 0.0.0.0",
     "deploy": "nuxt generate"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "vue-svg-loader": "^0.12.0"
   }
 }

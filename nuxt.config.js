@@ -13,7 +13,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    bodyAttrs: {
+      style: 'background-color:#000000'
+    }
   },
   /*
   ** Customize the progress-bar color
@@ -23,7 +26,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/fonts/jost*/stylesheet.css'
+    '@/assets/fonts/jost*/stylesheet.css',
+    '@/assets/fonts/nunito-300/stylesheet.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -44,6 +48,15 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      // svg
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/
+      config.module.rules.push(
+        {
+          test: /\.svg$/,
+          loader: 'vue-svg-loader'
+        }
+      )
     }
   }
 }

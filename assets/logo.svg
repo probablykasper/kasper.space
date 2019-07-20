@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+	<defs>
+		<style>
+			.cls-1 {
+				fill: none;
+			}
+
+			.cls-2 {
+				stroke: #fff;
+				stroke-miterlimit: 10;
+				stroke-width: 12px;
+			}
+		</style>
+	</defs>
+	<title>Asset 12</title>
+	<g id="Layer_2" data-name="Layer 2">
+		<g id="_2019" data-name="2019">
+			<rect id="invis_rect" data-name="invis rect" class="cls-1" width="1000" height="1000" />
+			<rect id="square" class="cls-2" x="65.28" y="65.28" width="869.44" height="869.44" />
+			<path id="Slur" class="cls-2" d="M458.09,6,6,458.09V994H541.91L994,541.91V6ZM934.72,517.37,517.37,934.72H65.28V482.63L482.63,65.28H934.72Z" />
+		</g>
+	</g>
+</svg>
