@@ -1,3 +1,4 @@
+import { basename } from 'path'
 
 export default {
   mode: 'spa',
@@ -54,7 +55,20 @@ export default {
       config.module.rules.push(
         {
           test: /\.svg$/,
-          loader: 'vue-svg-loader'
+          loader: 'vue-svg-loader',
+          options: {
+            svgo: {
+              plugins: [
+                {
+                  prefixIds: { // make sure IDs are unique
+                    prefix: (node, { path }) => basename(path, '.svg'),
+                    delim: '-'
+                  }
+                },
+                { cleanupIDs: false } // prevent IDs from being removed
+              ]
+            }
+          }
         }
       )
     }

@@ -1,45 +1,60 @@
 <template>
-  <div class="loading-container" :class="{ loaded: hasLoaded}">
+  <div class="loading-container" :class="{ loaded: hasLoaded, hidden: hidden}">
     <div class="middle">
-      <Logo class="splash-logo" />
+      <LogoFilled class="logo" />
       <p>kasper.space</p>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/assets/logo.svg'
+import LogoFilled from '~/assets/Logo 2019 Lines.svg'
 
 export default {
   components: {
-    Logo
+    LogoFilled
   },
   data() {
     return {
-      hasLoaded: false
+      hasLoaded: false,
+      hidden: false
     }
   },
   mounted() {
     setTimeout(() => {
       this.hasLoaded = true
+      setTimeout(() => {
+        this.hidden = true
+      }, 500)
     }, 1000)
   }
 }
 </script>
 
-<style>
+<style scoped>
 .loading-container {
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: #000000;
   user-select: none;
+  overflow: hidden;
 }
 
-.splash-logo {
+.loading-container.loaded {
+  animation: hide-opacity 0.5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+.loading-container.hidden {
+  display: none;
+}
+
+svg.logo {
   width: 120px;
   height: 120px;
 }
@@ -60,37 +75,39 @@ p {
   justify-content: center;
   flex-direction: column;
   transform-origin: center;
-  animation-duration: 0.5s;
-  animation-name: show;
-  /* animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1); */
-  animation-timing-function: cubic-bezier(0,.6,.6,1);
-  animation-fill-mode: forwards;
+  animation: show-logo 0.5s cubic-bezier(0,.6,.6,1) forwards;
   transform: scale(0.9);
   opacity: 0;
 }
 
 .loaded .middle {
-  animation-duration: 0.5s;
-  animation-name: hide;
-  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-  animation-fill-mode: forwards;
+  animation: hide-logo 0.5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  opacity: 1;
 }
 
-@keyframes show {
+@keyframes show-logo {
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
 
-@keyframes hide {
+@keyframes hide-logo {
   0% {
     transform: scale(1);
-    opacity: 1;
   }
   100% {
     transform: scale(1.11);
+  }
+}
+
+@keyframes hide-opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
+
 </style>
