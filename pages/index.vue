@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <nuxt-link to="/work">
-      WORK
-    </nuxt-link>
+    <p>Home page</p>
   </div>
 </template>
 
@@ -10,6 +8,6 @@
 
 </script>
 
-<style>
+<style scoped>
 
 </style>

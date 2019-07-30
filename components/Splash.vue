@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import LogoFilled from '~/assets/Logo 2019 Lines.svg'
+import LogoFilled from '~/assets/logo/2019 Lines.svg'
 
 export default {
   components: {

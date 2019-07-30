@@ -12,6 +12,7 @@
     "deploy": "nuxt generate"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
