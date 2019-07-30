@@ -1,13 +1,12 @@
-<template>
-  <div class="container">
-    <p>Home page</p>
-  </div>
+<template lang='pug'>
+  .container
+    p Home page
 </template>
 
 <script>
 
 </script>
 
-<style scoped>
+<style lang='sass' scoped>
 
 </style>

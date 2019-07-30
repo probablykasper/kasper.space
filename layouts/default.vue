@@ -1,10 +1,9 @@
-<template>
-  <div>
-    <div class="bg" />
-    <Header />
-    <nuxt />
-    <Splash />
-  </div>
+<template lang='pug'>
+  div
+    .bg
+    Header
+    nuxt
+    Splash
 </template>
 
 <script>
@@ -19,41 +18,34 @@ export default {
 }
 </script>
 
-<style>
-html {
-  font-family: 'Jost*', Rubik, 'Open Sans', Roboto, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 16px;
+<style lang='sass'>
+html
+  font-family: 'Jost*', Rubik, 'Open Sans', Roboto, Arial, sans-serif
+  color: #ffffff
+  font-size: 16px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
 
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
+img
+  display: block // remove 4px bottom space from images
 
-img {
-  display: block; /* remove 4px bottom space from images */
-}
+p
+  margin: 0
 
-p {
-  margin: 0;
-}
+\:focus
+  outline: none
 
-:focus {
-  outline: none;
-}
+a
+  color: white
+  text-decoration: none
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
-.bg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(at 80% 30%, rgba(160, 36, 255, 0.15), rgb(13, 2, 22));
-  z-index: -1;
-}
+.bg
+  position: absolute
+  height: 100%
+  width: 100%
+  background: radial-gradient(at 80% 30%, rgba(160, 36, 255, 0.15), rgb(13, 2, 22))
+  z-index: -1
 
 </style>
