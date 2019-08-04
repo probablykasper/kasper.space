@@ -1,8 +1,7 @@
 <template lang='pug'>
   .container
-    p Home page
+    p Work
 </template>
 
 <style lang='sass' scoped>
-
 </style>

@@ -1,6 +1,6 @@
 <template lang='pug'>
   .container
-    p Home page
+    p Contact
 </template>
 
 <style lang='sass' scoped>

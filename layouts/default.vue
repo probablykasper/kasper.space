@@ -26,7 +26,9 @@ html
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
   -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased !important
+svg
+  vertical-align: bottom
 
 img
   display: block // remove 4px bottom space from images
@@ -34,8 +36,15 @@ img
 p
   margin: 0
 
-\:focus
+html :focus
   outline: none
+
+.page-enter-active, .page-leave-active
+  transition-property: opacity
+  transition-timing-function: ease-in-out
+  transition-duration: 100ms
+.page-enter, .page-leave-to
+  opacity: 0
 
 a
   color: white

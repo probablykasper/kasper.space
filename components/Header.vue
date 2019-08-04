@@ -1,11 +1,26 @@
 <template lang='pug'>
   .header
     nuxt-link(to='/')
-      img.logo(src='~/assets/logo/2019 Filled.png')
+      //- svg.logo(src='~/assets/logo/2019 Filled.svg')
+      LogoFilled.logo
     .navbar
-      nuxt-link(to='/work') Work
-      nuxt-link(to='/development') Development
+      nuxt-link.work(to='/work')
+        p Work
+      nuxt-link.shop(to='/shop')
+        p Shop
+      nuxt-link.contact(to='/contact')
+        p Contact
 </template>
+
+<script>
+import LogoFilled from '~/assets/logo/2019 Filled.svg'
+
+export default {
+  components: {
+    LogoFilled
+  }
+}
+</script>
 
 <style lang='sass' scoped>
 
@@ -15,6 +30,54 @@
   align-items: center
   justify-content: space-between
   padding: 50px 65px
+
+  .navbar
+    a
+      margin-left: 20px
+      display: inline-block
+      position: relative
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+      @keyframes gradient-animation
+        0%
+          background-position: 0% 0%
+        100%
+          background-position: 100% 100%
+      &.work::after
+        background: linear-gradient(-45deg, #89216b, #C68A67, #89216b, #C68A67)
+        background-size: 300% 300%
+      &.shop::after
+        background-image: linear-gradient(-45deg, #9F4DF6, #6BBEF8, #9F4DF6, #6BBEF8)
+        background-size: 300% 300%
+      &.contact::after
+        background: linear-gradient(-45deg, #1B77E6, #00FFA3, #1B77E6, #00FFA3)
+        background-size: 300% 300%
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        animation: gradient-animation 3s linear infinite
+        clip-path: polygon(0% 100%, 2px 100%, 2px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 100%, 100% 100%, 100% 0%, 0% 0%)
+        border-radius: 2px
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        opacity: 0
+      &:hover::after, &.nuxt-link-active::after
+        opacity: 1
+      &:hover
+        opacity: 1
+        transform: scale(1.1)
+      p
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        opacity: 0.7
+        font-size: 105%
+        font-weight: 500
+        padding: 9px 20px
+        -webkit-backface-visibility: hidden
+        -webkit-transform: translateZ(0) scale(1.0, 1.0)
+        &.nuxt-link-active
+          opacity: 1
 
 .logo
   width: 60px
