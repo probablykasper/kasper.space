@@ -1,6 +1,5 @@
 <template lang='pug'>
   div
-    .bg
     Header
     nuxt
     Splash
@@ -27,11 +26,14 @@ html
   -webkit-text-size-adjust: 100%
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased !important
-svg
-  vertical-align: bottom
+  max-width: 1300px
+  margin-left: auto
+  margin-right: auto
+body
+  margin: 0px 6%
 
-img
-  display: block // remove 4px bottom space from images
+svg, img // remove 4px bottom space
+  vertical-align: bottom
 
 p
   margin: 0
@@ -49,12 +51,5 @@ html :focus
 a
   color: white
   text-decoration: none
-
-.bg
-  position: absolute
-  height: 100%
-  width: 100%
-  background: radial-gradient(at 80% 30%, rgba(160, 36, 255, 0.15), rgb(13, 2, 22))
-  z-index: -1
 
 </style>

@@ -29,10 +29,26 @@ export default {
   flex-direction: row
   align-items: center
   justify-content: space-between
-  padding: 50px 65px
+  align-content: center
+  margin: 50px 0px
+  @media screen and (max-width: 450px)
+    flex-direction: column
+    align-items: left
+
+  .logo
+    width: 60px
+    height: 60px
+    @media screen and (max-width: 450px)
+      margin-bottom: 30px
+      width: 70px
+      height: 70px
 
   .navbar
+    display: flex
+    justify-content: space-evenly
     a
+      @media screen and (max-width: 550px)
+        margin-left: 15px
       margin-left: 20px
       display: inline-block
       position: relative
@@ -69,6 +85,9 @@ export default {
         opacity: 1
         transform: scale(1.1)
       p
+        @media screen and (max-width: 550px)
+          font-size: 95%
+          padding: 8px 15px
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         opacity: 0.7
         font-size: 105%
@@ -78,9 +97,5 @@ export default {
         -webkit-transform: translateZ(0) scale(1.0, 1.0)
         &.nuxt-link-active
           opacity: 1
-
-.logo
-  width: 60px
-  height: 60px
 
 </style>

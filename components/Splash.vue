@@ -33,7 +33,7 @@ export default {
 .loading-container
   width: 100%
   height: 100%
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   display: flex
@@ -41,6 +41,7 @@ export default {
   flex-direction: column
   background-color: #000000
   user-select: none
+  pointer-events: none
   overflow: hidden
   &.loaded
     animation: hide-opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards
