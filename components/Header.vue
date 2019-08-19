@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style lang='sass' scoped>
-
 .header
   display: flex
   flex-direction: row
@@ -75,8 +74,10 @@ export default {
         right: 0
         bottom: 0
         animation: gradient-animation 3s linear infinite
-        clip-path: polygon(0% 100%, 2px 100%, 2px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 100%, 100% 100%, 100% 0%, 0% 0%)
+        $x: 2px;
+        clip-path: polygon(0% 100%, $x 100%, $x $x, calc(100% - #{$x}) $x, calc(100% - #{$x}) calc(100% - #{$x}), $x calc(100% - #{$x}), $x 100%, 100% 100%, 100% 0%, 0% 0%)
         border-radius: 2px
+        transition-property: all
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         opacity: 0
       &:hover::after, &.nuxt-link-active::after
@@ -95,7 +96,5 @@ export default {
         padding: 9px 20px
         -webkit-backface-visibility: hidden
         -webkit-transform: translateZ(0) scale(1.0, 1.0)
-        &.nuxt-link-active
-          opacity: 1
 
 </style>

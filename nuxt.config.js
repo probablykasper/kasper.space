@@ -2,9 +2,7 @@ import { basename } from 'path'
 
 export default {
   mode: 'spa',
-  /*
-  ** Headers of the page
-  */
+  // Headers of the page
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -19,36 +17,23 @@ export default {
       style: 'background-color:#000000'
     }
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+  // Customize the progress-bar color
+  // loading: '@/components/spapa.html',
+  // Global CSS
   css: [
     '@/assets/fonts/jost*/stylesheet.css',
     '@/assets/fonts/nunito-300/stylesheet.css',
     'normalize.css/normalize.css'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
+  // Plugins to load before mounting the App
+  plugins: [],
+  // Nuxt.js modules
   modules: [
     '@nuxtjs/eslint-module'
   ],
-  /*
-  ** Build configuration
-  */
+  // Build configuration
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    // You can extend webpack config here
     extend(config, ctx) {
       // svg
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
