@@ -17,8 +17,8 @@ import LogoFilled from '~/assets/logo/2019 Filled.svg'
 
 export default {
   components: {
-    LogoFilled
-  }
+    LogoFilled,
+  },
 }
 </script>
 

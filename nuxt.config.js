@@ -8,28 +8,33 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
     bodyAttrs: {
-      style: 'background-color:#000000'
-    }
+      style: 'background-color:#000000',
+    },
   },
   // Customize the progress-bar color
-  // loading: '@/components/spapa.html',
+  loading: { color: '#fff' },
   // Global CSS
   css: [
     '@/assets/fonts/jost*/stylesheet.css',
     '@/assets/fonts/nunito-300/stylesheet.css',
-    'normalize.css/normalize.css'
+    'normalize.css/normalize.css',
   ],
   // Plugins to load before mounting the App
-  plugins: [],
+  plugins: [
+  ],
+  // Nuxt.js dev-modules
+  devModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+  ],
   // Nuxt.js modules
   modules: [
-    '@nuxtjs/eslint-module'
   ],
   // Build configuration
   build: {
@@ -48,15 +53,15 @@ export default {
                 {
                   prefixIds: { // make sure IDs are unique
                     prefix: (node, { path }) => basename(path, '.svg'),
-                    delim: '-'
-                  }
+                    delim: '-',
+                  },
                 },
-                { cleanupIDs: false } // prevent IDs from being removed
-              ]
-            }
-          }
+                { cleanupIDs: false }, // prevent IDs from being removed
+              ],
+            },
+          },
         }
       )
-    }
-  }
+    },
+  },
 }

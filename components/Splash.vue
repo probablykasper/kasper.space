@@ -10,12 +10,12 @@ import LogoFilled from '~/assets/logo/2019 Lines.svg'
 
 export default {
   components: {
-    LogoFilled
+    LogoFilled,
   },
   data() {
     return {
       hasLoaded: false,
-      hidden: false
+      hidden: false,
     }
   },
   mounted() {
@@ -25,7 +25,7 @@ export default {
         this.hidden = true
       }, 500)
     }, 1000)
-  }
+  },
 }
 </script>
 
