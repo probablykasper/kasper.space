@@ -41,6 +41,10 @@ export default {
       margin-bottom: 30px
       width: 70px
       height: 70px
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+    &:hover
+      opacity: 1
+      transform: scale(1.1)
 
   .navbar
     display: flex

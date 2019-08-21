@@ -33,6 +33,7 @@ html
   max-width: 1300px
   margin-left: auto
   margin-right: auto
+  overflow-y: scroll
 body
   margin: 0px 6%
 #layout-container
