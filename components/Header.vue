@@ -47,8 +47,10 @@ export default {
     justify-content: space-evenly
     a
       @media screen and (max-width: 550px)
-        margin-left: 15px
-      margin-left: 20px
+        margin-right: 15px
+      margin-right: 20px
+      &:last-child
+        margin-right: 0px
       display: inline-block
       position: relative
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
