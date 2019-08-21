@@ -13,6 +13,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
+    htmlAttrs: {
+      lang: 'en-US',
+    },
     bodyAttrs: {
       style: 'background-color:#000000',
     },

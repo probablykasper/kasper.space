@@ -15,7 +15,7 @@ export default {
       /* eslint-disable */
       particlesJS('particles-js', {
         particles: {
-          number: { value: 160, density: { enable: true, value_area: 800 } },
+          number: { value: 500, density: { enable: true, value_area: 800 } },
           color: { value: '#ffffff' },
           shape: {
             type: 'circle',
@@ -26,10 +26,10 @@ export default {
           opacity: {
             value: 0.5,
             random: true,
-            anim: { enable: true, speed: 0.5, opacity_min: 0, sync: false },
+            anim: { enable: false, speed: 0.5, opacity_min: 0, sync: false },
           },
           size: {
-            value: 2.5,
+            value: 1.5,
             random: true,
             anim: { enable: false, speed: 1, size_min: 0.3, sync: false },
           },
@@ -48,7 +48,7 @@ export default {
             straight: true,
             out_mode: 'out',
             bounce: false,
-            attract: { enable: true, rotateX: 3000, rotateY: 3000 },
+            attract: { enable: false, rotateX: 3000, rotateY: 3000 },
           },
         },
         interactivity: {
