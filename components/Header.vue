@@ -95,7 +95,7 @@ export default {
         opacity: 0.7
         font-size: 105%
         font-weight: 500
-        padding: 9px 20px
+        padding: 10px 20px
         -webkit-backface-visibility: hidden
         -webkit-transform: translateZ(0) scale(1.0, 1.0)
 
