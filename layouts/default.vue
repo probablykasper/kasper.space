@@ -1,5 +1,6 @@
 <template lang='pug'>
-  div
+  div#layout-container
+    ParticlesJS
     Header
     nuxt
     Splash
@@ -8,11 +9,13 @@
 <script>
 import Splash from '~/components/Splash.vue'
 import Header from '~/components/Header.vue'
+import ParticlesJS from '~/components/ParticlesJS.vue'
 
 export default {
   components: {
     Header,
     Splash,
+    ParticlesJS,
   },
 }
 </script>
@@ -31,6 +34,8 @@ html
   margin-right: auto
 body
   margin: 0px 6%
+#layout-container
+  margin-bottom: 50px
 
 svg, img // remove 4px bottom space
   vertical-align: bottom
