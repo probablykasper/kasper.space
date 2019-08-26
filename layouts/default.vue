@@ -62,6 +62,7 @@ svg, img // remove 4px bottom space
 
 p
   margin: 0
+  color: #d3d4de
 h1
   font-size: 40px
   font-weight: 500
