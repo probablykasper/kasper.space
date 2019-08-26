@@ -23,7 +23,7 @@ export default {
 
 <style lang='sass'>
 html
-  font-family: 'Jost*', Rubik, 'Open Sans', Roboto, Arial, sans-serif
+  font-family: Lato, Rubik, 'Open Sans', Roboto, Arial, sans-serif
   color: #ffffff
   font-size: 16px
   -ms-text-size-adjust: 100%
@@ -62,12 +62,14 @@ svg, img // remove 4px bottom space
 
 p
   margin: 0
+  line-height: 1.5rem
   color: #d3d4de
 h1
   font-size: 40px
   font-weight: 500
   margin: 0px
   margin-bottom: 20px
+  font-family: 'Jost*', Lato, sans-serif, Arial
 
 html :focus
   outline: none

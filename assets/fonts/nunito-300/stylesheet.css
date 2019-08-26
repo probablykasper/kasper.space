@@ -1,9 +1,0 @@
-/* nunito-300 - latin */
-@font-face {
-	font-family: 'Nunito';
-	src: local('Nunito Light'), local('Nunito-Light'),
-		url('nunito-v10-latin-300.woff2') format('woff2'),
-		url('nunito-v10-latin-300.woff') format('woff');
-	font-style: normal;
-	font-weight: 300;
-}

@@ -24,8 +24,7 @@ export default {
   loading: { color: '#fff' },
   // Global CSS
   css: [
-    '@/assets/fonts/jost*/stylesheet.css',
-    '@/assets/fonts/nunito-300/stylesheet.css',
+    '@/assets/fonts/stylesheet.css',
     'normalize.css/normalize.css',
   ],
   // Plugins to load before mounting the App
