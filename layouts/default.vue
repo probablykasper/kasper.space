@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang='sass'>
+<style lang="sass">
 html
   font-family: Lato, Rubik, 'Open Sans', Roboto, Arial, sans-serif
   color: #ffffff
@@ -71,8 +71,8 @@ h1
   margin-bottom: 20px
   font-family: 'Jost*', Lato, sans-serif, Arial
 
-html :focus
-  outline: none
+// html :focus
+//   outline: none
 
 .page-enter-active, .page-leave-active
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1)

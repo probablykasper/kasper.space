@@ -3,6 +3,6 @@
     p Shop
 </template>
 
-<style lang='sass' scoped>
+<style lang="sass" scoped>
 
 </style>

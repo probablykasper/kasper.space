@@ -3,5 +3,5 @@
     p Work
 </template>
 
-<style lang='sass' scoped>
+<style lang="sass" scoped>
 </style>

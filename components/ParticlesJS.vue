@@ -79,7 +79,7 @@ export default {
 };
 </script>
 
-<style lang='sass'>
+<style lang="sass">
 #particles-js
   position: fixed
   top: 0

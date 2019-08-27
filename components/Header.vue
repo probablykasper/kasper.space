@@ -5,11 +5,14 @@
       LogoFilled.logo
     .navbar
       nuxt-link.work(to='/work')
-        p Work
+        .outline
+        .title Work
       nuxt-link.shop(to='/shop')
-        p Shop
+        .outline
+        .title Shop
       nuxt-link.contact(to='/contact')
-        p Contact
+        .outline
+        .title Contact
 </template>
 
 <script>
@@ -22,10 +25,11 @@ export default {
 }
 </script>
 
-<style lang='sass' scoped>
+<style lang="sass" scoped>
 .header
   display: flex
   flex-direction: row
+  flex-shrink: 0
   align-items: center
   justify-content: space-between
   align-content: center
@@ -63,16 +67,16 @@ export default {
           background-position: 0% 0%
         100%
           background-position: 100% 100%
-      &.work::after
+      &.work .outline
         background: linear-gradient(-45deg, #89216b, #C68A67, #89216b, #C68A67)
         background-size: 300% 300%
-      &.shop::after
+      &.shop .outline
         background-image: linear-gradient(-45deg, #9F4DF6, #6BBEF8, #9F4DF6, #6BBEF8)
         background-size: 300% 300%
-      &.contact::after
+      &.contact .outline
         background: linear-gradient(-45deg, #1B77E6, #00FFA3, #1B77E6, #00FFA3)
         background-size: 300% 300%
-      &::after
+      .outline
         content: ''
         position: absolute
         top: 0
@@ -86,12 +90,15 @@ export default {
         transition-property: all
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         opacity: 0
-      &:hover::after, &.nuxt-link-active::after
+        transform: rotate(.00001deg)
+      &.nuxt-link-active .outline
         opacity: 1
+        outline: 1px solid transparent;
       &:hover
-        opacity: 1
         transform: scale(1.1)
-      p
+        .title
+          opacity: 1
+      .title
         @media screen and (max-width: 550px)
           font-size: 95%
           padding: 8px 15px

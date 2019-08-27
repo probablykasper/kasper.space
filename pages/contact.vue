@@ -8,16 +8,15 @@
         .text kasperkh.kh@gmail.com
 </template>
 
-<style lang='sass' scoped>
+<style lang="sass" scoped>
 .page-container
   text-align: center
   white-space: pre-wrap
   a
     display: inline-block
     position: relative
-    padding: 4px
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-    div
+    padding: 3px
+    .text
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
     &::after
       content: ''
@@ -25,15 +24,16 @@
       width: 100%
       height: 2px
       background-color: #d3d4de
-      bottom: 2px
+      bottom: 0px
       left: 0
       opacity: 0
-      transform: translateY(0px) scaleX(0.7)
+      transform: scaleX(0.7)
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
     &:hover
+      $moveVertically: -2px
       .text
-        transform: translateY(-3px)
+        transform: translateY($moveVertically)
       &::after
-        transform: translateY(-3px) scaleX(1)
+        transform: translateY($moveVertically) scaleX(1)
         opacity: 1
 </style>
