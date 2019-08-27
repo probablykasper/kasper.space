@@ -51,6 +51,7 @@ html, body, #__nuxt, #__layout, #layout-container
     display: flex
     justify-content: center
     flex-direction: column
+    text-align: center
   #bottom-header-compensation
     min-height: 50px
     height: 10%
@@ -71,17 +72,14 @@ h1
   margin-bottom: 20px
   font-family: 'Jost*', Lato, sans-serif, Arial
 
-// html :focus
-//   outline: none
-
 .page-enter-active, .page-leave-active
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1)
 .page-enter
   opacity: 0
-  transform: scale(0.95)
+  transform: translateY(40px)
 .page-leave-to
   opacity: 0
-  transform: scale(1.05)
+  transform: translateY(-40px)
 
 a
   color: white

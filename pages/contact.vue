@@ -10,7 +10,6 @@
 
 <style lang="sass" scoped>
 .page-container
-  text-align: center
   white-space: pre-wrap
   a
     display: inline-block

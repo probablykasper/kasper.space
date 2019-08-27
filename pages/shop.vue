@@ -1,5 +1,5 @@
 <template lang='pug'>
-  .container
+  .page-container
     p Shop
 </template>
 

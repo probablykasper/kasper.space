@@ -61,7 +61,7 @@ export default {
         margin-right: 0px
       display: inline-block
       position: relative
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
       @keyframes gradient-animation
         0%
           background-position: 0% 0%

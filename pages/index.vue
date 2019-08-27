@@ -1,6 +1,6 @@
 <template lang='pug'>
-  .container
-    p Home page
+  .page-container.centered-page
+    h1 Kasper Henningsen
 </template>
 
 <style lang="sass" scoped>
