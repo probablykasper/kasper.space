@@ -15,5 +15,8 @@
 	],
 	"eslint.autoFixOnSave": true,
 	"editor.formatOnSave": false,
-	"vetur.validation.template": false
+	"vetur.validation.template": false,
+  "files.associations": {
+    "**/.vscode/settings.json": "jsonc"
+  }
 }
