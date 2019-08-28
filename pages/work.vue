@@ -1,6 +1,6 @@
 <template lang='pug'>
 .page-container
-  .section.development
+  .section.development(data-color='#000000')
     h1.section-title Development
     p.section-description
       | I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, CSS, JavaScript, jQuery, Vue.js, Node.js, Python, MySQL, MongoDB, Docker and more.
@@ -29,7 +29,7 @@
         div
           .thumbnail lacuna.to
         p.item-text Lacuna Website
-  .section.video
+  .section.video(data-color='#1e1835')
     h1.section-title Video
     p.section-description
       | I have made several audio visualizers and lyric videos, as well as over 60 cover art animations for Lowly, a record label with 400 000 YouTube subscribers.
@@ -52,7 +52,7 @@
       a.item(href='https://www.youtube.com/watch?v=HPycLyk_1Tk' target='_blank' rel='noopener noreferrer')
         img.thumbnail(src='thumbnails/video-madeoftime.jpg')
         p.item-text Cover art animation
-  .section.lacuna
+  .section.lacuna(data-color='#172836')
     h1.section-title Lacuna
     p.section-description
       | An independent record label I co-run. Our music has over ten million plays across Spotify, Apple Music and YouTube.
@@ -73,11 +73,50 @@
         img.thumbnail(src='thumbnails/cover-crazyforyou.jpg')
       a.item(href='' target='_blank' rel='noopener noreferrer')
         img.thumbnail(src='thumbnails/cover-home.jpg')
-  .section.cover-art
+  .section.cover-art(data-color='#3e1e43')
     h1.section-title Cover Art
     p.section-description
       | I've made some cover arts, which are available for purchase.
 </template>
+
+<script>
+import { EventBus } from '~/plugins/event-bus.js'
+
+export default {
+  data() {
+    return {
+      sectionPositions: Array,
+    }
+  },
+  mounted() {
+    this.initObserver()
+  },
+  methods: {
+    initObserver() {
+      const observerCallback = (entries) => {
+        for (const entry of entries) {
+          console.log(entry)
+          if (entry.boundingClientRect.top < 0 && !entry.isIntersecting) {
+            EventBus.$emit('bg-color-update', entry.target.nextSibling.dataset.color)
+          } else if (entry.boundingClientRect.top < 0 && entry.isIntersecting) {
+            EventBus.$emit('bg-color-update', entry.target.dataset.color)
+          }
+        }
+      }
+      const observer = new IntersectionObserver(observerCallback, {
+        root: null,
+        rootMargin: '-150px',
+        threshold: 0,
+      })
+      const sections = this.$el.children
+      // observer.observe(sections[1])
+      for (const section of sections) {
+        observer.observe(section)
+      }
+    },
+  },
+}
+</script>
 
 <style lang="sass" scoped>
 .section
@@ -124,7 +163,7 @@
         box-sizing: border-box
         &:not(img)
           padding: 18% 0px
-        background-color: rgba(24, 27, 37, 0.85)
+        background-color: #181b25
         border-radius: 2px
 
         display: flex

@@ -19,9 +19,9 @@ export default {
           color: { value: '#ffffff' },
           shape: {
             type: 'circle',
-            // stroke: { width: 0, color: '#000000' },
-            // polygon: { nb_sides: 5 },
-            // image: { src: 'img/github.svg', width: 100, height: 100 }
+            stroke: { width: 0, color: '#000000' },
+            polygon: { nb_sides: 5 },
+            image: { src: 'img/github.svg', width: 100, height: 100 }
           },
           opacity: {
             value: 0.5,
@@ -81,10 +81,12 @@ export default {
 
 <style lang="sass">
 #particles-js
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   width: 100%
   height: 100%
   z-index: -1
+  canvas
+    vertical-align: bottom;
 </style>
