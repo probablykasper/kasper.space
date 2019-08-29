@@ -24,7 +24,7 @@ export default {
             image: { src: 'img/github.svg', width: 100, height: 100 }
           },
           opacity: {
-            value: 0.5,
+            value: 0.6,
             random: true,
             anim: { enable: false, speed: 0.5, opacity_min: 0, sync: false },
           },
@@ -81,7 +81,7 @@ export default {
 
 <style lang="sass">
 #particles-js
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   width: 100%

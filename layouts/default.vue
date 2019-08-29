@@ -1,7 +1,6 @@
 <template lang='pug'>
   div#layout-container
     ParticlesJS
-    .bg(v-bind:style='bgStyle')
     Header
     nuxt#page-container(v-on:updateBgColor='up')
     #bottom-header-compensation
@@ -12,32 +11,12 @@
 import Splash from '~/components/Splash.vue'
 import Header from '~/components/Header.vue'
 import ParticlesJS from '~/components/ParticlesJS.vue'
-import 'intersection-observer'
-import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
   components: {
     Header,
     Splash,
     ParticlesJS,
-  },
-  data() {
-    const backgroundColor = '#090911'
-    const bgStyle = `background-color: ${backgroundColor};`
-    return {
-      bgStyle,
-    }
-  },
-  mounted() {
-    EventBus.$on('bg-color-update', (backgroundColor) => {
-      console.log('xxxxxxxxxxxxxxxx', backgroundColor)
-      this.bgStyle = `background-color: ${backgroundColor};`
-    })
-  },
-  methods: {
-    up() {
-      console.log(555)
-    },
   },
 }
 </script>
@@ -57,24 +36,6 @@ html
   overflow-y: scroll
 body
   margin: 0px 6%
-
-// .bg
-//   position: absolute
-//   width: 100%
-//   height: 100%
-//   top: 0
-//   left: 0
-//   background: linear-gradient(0deg, #090911, rgba(#ffffff, 0) 20%)
-//   z-index: -1
-.bg
-  position: fixed
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  background: #000000
-  z-index: -2
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1)
 
 // for enabling veritcally centered pages
 html, body, #__nuxt, #__layout, #layout-container
