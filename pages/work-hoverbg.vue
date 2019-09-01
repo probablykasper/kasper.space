@@ -2,8 +2,11 @@
 .page-container
   template(v-for='section in sections')
     .section(:class='section.class')
-      h1.section-title {{section.title}}
-      p.section-description {{section.description}}
+      .bg
+      h1.section-title
+        | {{section.title}}
+      p.section-description
+        | {{section.description}}
       .items(:class='section.type')
         template(v-for='item in section.items')
           a.item(:href='item.url' target='_blank' rel='noopener noreferrer')
@@ -187,6 +190,33 @@ export default {
       text-align: right
     .section-description
       margin-left: auto
+  .bg
+    position: absolute
+    // width: 110%
+    width: 210%
+    max-width: calc(100vw - 5px)
+    transform: translateX(-50%)
+    height: 100%
+    filter: blur(150px)
+    left: 50%
+    background: #000000
+    z-index: -2
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+    opacity: 0
+  @media screen and (max-width: 768px)
+    .bg
+      opacity: 0.5
+  &:hover .bg
+    opacity: 0.5
+  &.development .bg
+    // background: #000000
+    background: linear-gradient(to bottom right, #9294b5, #03197d)
+  &.video .bg
+    background: linear-gradient(to bottom right, #a37db5, #14066f)
+  &.lacuna .bg
+    background: linear-gradient(to bottom right, #d15252, #660066)
+  &.cover-art .bg
+    background: linear-gradient(to bottom right, #11885c, #04467c)
   .section-description
     @media screen and (max-width: 600px)
       font-size: 14px
@@ -197,7 +227,7 @@ export default {
     flex-wrap: wrap
     $margin: 13px
     margin: 0px -$margin
-    &.square-images
+    &.squares
       .item
         // width: calc(100%/4 - 20px)
         width: calc(100%/4 - 2*#{$margin})

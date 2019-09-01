@@ -43,6 +43,7 @@ export default {
   user-select: none
   pointer-events: none
   overflow: hidden
+  z-index: 100
   &.loaded
     animation: hide-opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards
   &.hidden
