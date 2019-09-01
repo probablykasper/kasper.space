@@ -1,9 +1,9 @@
 <template lang='pug'>
 div
   template(v-for='section, index in sections')
-    .section(:class='section.class')
-      h1.section-title(:data-aos='index % 2 ? "fade-left" : "fade-right"' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`.${section.class}`') {{section.title}}
-      p.section-description(:data-aos='index % 2 ? "zoom-in-left" : "zoom-in-right"' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`.${section.class}`') {{section.description}}
+    .section(:class='`${section.class} align-${section.align}`')
+      h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`.${section.class}`') {{section.title}}
+      p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`.${section.class}`') {{section.description}}
       .items(:class='section.type')
         template(v-for='item, index in section.items')
           a.item(:href='item.url' target='_blank' rel='noopener noreferrer' data-aos='fade-up' data-aos-duration='650' :data-aos-delay='200+index*100' :data-aos-anchor='`.${section.class} .items`')
@@ -21,6 +21,21 @@ export default {
       required: true,
     },
   },
+  methods: {
+    getAOS(element, align) {
+      if (element === 'title') {
+        // eslint-disable-next-line curly
+        if (align === 'left') return 'fade-right'
+        if (align === 'right') return 'fade-left'
+        if (align === 'center') return 'zoom-out'
+      } else if (element === 'description') {
+        if (align === 'left') return 'zoom-in-right'
+        if (align === 'right') return 'zoom-in-left'
+        if (align === 'center') return 'zoom-in'
+        if (align === 'center') return 'zoom-in-up'
+      }
+    },
+  },
 }
 </script>
 
@@ -28,10 +43,14 @@ export default {
 .section
   position: relative
   padding-bottom: 100px
-  &:nth-child(2n)
+  &.align-center
+    .section-title, .section-description
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+  &.align-right
     .section-title, .section-description
       text-align: right
-    .section-description
       margin-left: auto
   .section-description
     @media screen and (max-width: 600px)

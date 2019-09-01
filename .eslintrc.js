@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'space-before-function-paren': ['error', 'never'],
-    'comma-dangle': ['error', 'always-multiline']
+    'comma-dangle': ['error', 'always-multiline'],
+    'curly': ['error', 'multi-line'],
   }
 }
