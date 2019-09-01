@@ -24,6 +24,10 @@ export default {
       setTimeout(() => {
         this.hidden = true
       }, 500)
+      const event = document.createEvent('HTMLEvents')
+      event.initEvent('aos-start', true, true)
+      event.eventName = 'aos-start'
+      document.dispatchEvent(event)
     }, 1000)
   },
 }

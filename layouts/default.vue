@@ -71,13 +71,13 @@ h1
   font-family: 'Jost*', Lato, sans-serif, Arial
 
 .page-enter-active, .page-leave-active
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-.page-enter
-  opacity: 0
-  transform: translateY(30px)
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+// .page-enter
+//   opacity: 0
+//   transform: translateY(30px)
 .page-leave-to
   opacity: 0
-  transform: translateY(-30px)
+  // transform: translateY(-30px)
 
 a
   color: white

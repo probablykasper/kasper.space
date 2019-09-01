@@ -1,12 +1,12 @@
 <template lang='pug'>
 .page-container
-  template(v-for='section in sections')
+  template(v-for='section, index in sections')
     .section(:class='section.class')
-      h1.section-title {{section.title}}
-      p.section-description {{section.description}}
+      h1.section-title(:data-aos='index % 2 ? "fade-left" : "fade-right"' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='"."+section.class') {{section.title}}
+      p.section-description(:data-aos='index % 2 ? "zoom-in-left" : "zoom-in-right"' data-aos-duration='800' data-aos-delay='50' :data-aos-anchor='"."+section.class') {{section.description}}
       .items(:class='section.type')
-        template(v-for='item in section.items')
-          a.item(:href='item.url' target='_blank' rel='noopener noreferrer')
+        template(v-for='item, index in section.items')
+          a.item(:href='item.url' target='_blank' rel='noopener noreferrer' data-aos='fade-up' data-aos-duration='650' :data-aos-delay='250+index*100' :data-aos-anchor='`.${section.class} .items`')
             .thumbnail-container(v-if='section.type === "text-only"')
               .thumbnail {{item.thumbnailText}}
             img.thumbnail(v-else :src='item.src')

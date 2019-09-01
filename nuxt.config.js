@@ -26,9 +26,11 @@ export default {
   css: [
     '@/assets/fonts/stylesheet.css',
     'normalize.css/normalize.css',
+    'aos/dist/aos.css',
   ],
   // Plugins to load before mounting the App
   plugins: [
+    { src: '@/plugins/aos.js', ssr: false },
   ],
   // Nuxt.js dev-modules
   devModules: [

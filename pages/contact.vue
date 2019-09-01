@@ -1,7 +1,8 @@
 <template lang='pug'>
   .page-container.centered-page
-    h1 Contact
-    p
+    h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
+      | Contact
+    p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | You can reach me at
       |
       a(href='mailto:kasperkh.kh@gmail.com')
