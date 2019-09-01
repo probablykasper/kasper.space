@@ -10,7 +10,7 @@
             .thumbnail-container(v-if='section.type === "text-only"')
               .thumbnail {{item.thumbnailText}}
             img.thumbnail(v-else :src='item.src')
-            p.item-text {{item.text}}
+            p.item-text(v-if='item.text') {{item.text}}
 </template>
 
 <script>
@@ -199,7 +199,6 @@ export default {
     margin: 0px -$margin
     &.square-images
       .item
-        // width: calc(100%/4 - 20px)
         width: calc(100%/4 - 2*#{$margin})
         @media screen and (max-width: 900px)
           width: calc(100%/3 - 2*#{$margin})
@@ -209,24 +208,35 @@ export default {
           width: calc(100%/2 - 2*#{$margin})
         .thumbnail
           min-height: 100%
+    &.text-only .item
+      .thumbnail-container
+        background-color: #181b25
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        .thumbnail
+          padding: 18% 0px
+          opacity: 0.7
+    &.text-only .item:hover
+      .thumbnail-container
+        background-color: lighten(#181b25, 1%)
+        .thumbnail
+          opacity: 1
+    .item:hover
+      > *
+        transform: translateY(-4px)
+      .item-text
+        opacity: 1
     .item
       display: inline-block
       margin: $margin
       width: calc(100%/3 - 2*#{$margin})
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-      &:hover
-        transform: translateY(-4px)
       @media screen and (max-width: 900px)
         width: calc(100%/2 - 2*#{$margin})
       .thumbnail
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         display: block
         width: 100%
         box-sizing: border-box
-        &:not(img)
-          padding: 18% 0px
-        background-color: #181b25
         border-radius: 2px
-
         display: flex
         align-items: center
         justify-content: center
@@ -234,7 +244,8 @@ export default {
         @media screen and (max-width: 500px)
           font-size: 5.5vw
       .item-text
-        opacity: 0.8
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        opacity: 0.7
         text-align: center
         font-size: 14px
         margin-top: 4px

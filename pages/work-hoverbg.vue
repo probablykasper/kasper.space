@@ -210,9 +210,11 @@ export default {
     opacity: 0.5
   &.development .bg
     // background: #000000
-    background: linear-gradient(to bottom right, #9294b5, #03197d)
+    background: linear-gradient(to bottom right, #8486a9, #03197d)
+    // background: linear-gradient(to bottom right, #9294b5, #03197d)
   &.video .bg
-    background: linear-gradient(to bottom right, #a37db5, #14066f)
+    background: linear-gradient(to bottom right, #b57da7, #22066f)
+    // background: linear-gradient(to bottom right, #a37db5, #14066f)
   &.lacuna .bg
     background: linear-gradient(to bottom right, #d15252, #660066)
   &.cover-art .bg
