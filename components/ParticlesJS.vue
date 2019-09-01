@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     initParticlesJS() {
-      /* eslint-disable */
+      // eslint-disable-next-line no-undef
       particlesJS('particles-js', {
         particles: {
           number: { value: 500, density: { enable: true, value_area: 800 } },
@@ -21,7 +21,7 @@ export default {
             type: 'circle',
             stroke: { width: 0, color: '#000000' },
             polygon: { nb_sides: 5 },
-            image: { src: 'img/github.svg', width: 100, height: 100 }
+            image: { src: 'img/github.svg', width: 100, height: 100 },
           },
           opacity: {
             value: 0.6,
@@ -72,11 +72,11 @@ export default {
             remove: { particles_nb: 2 },
           },
         },
-        retina_detect: true
-      });
-    }
-  }
-};
+        retina_detect: true,
+      })
+    },
+  },
+}
 </script>
 
 <style lang="sass">
