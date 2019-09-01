@@ -2,7 +2,7 @@
   div#layout-container
     ParticlesJS
     Header
-    nuxt#page-container(v-on:updateBgColor='up')
+    nuxt#page-container
     #bottom-header-compensation
     Splash
 </template>
