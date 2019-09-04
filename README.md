@@ -15,24 +15,6 @@ The website is built with [Nuxt.js](https://nuxtjs.org) and [Vue.js](https://vue
 
 ### Commands
 
-```bash
-# Start dev server
-npm run start
-
-# Build into /dist
-npm run build
-
-# Build and commit with a tag, which will trigger deployment
-# <version> can be patch, minor, major or a specific version
-npm run deploy <version>
-
-# Lint the project
-npm run lint
-
-# Lint and fix fixable errors/warnings
-npm run lint-fix
-```
-
 Start dev server:
 
 ```

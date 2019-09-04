@@ -10,7 +10,7 @@
     "precommit": "npm run lint",
     "start": "nuxt --hostname 0.0.0.0",
     "build": "nuxt generate",
-    "deploy": "npm run build && npm version"
+    "deploy": "npm version"
   },
   "dependencies": {
     "nuxt": "^2.0.0"

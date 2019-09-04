@@ -43,6 +43,27 @@ export default {
       id: 'UA-145975820-1',
     }],
   ],
+  generate: {
+    routes() {
+      const fs = require('fs')
+      const shopItemIds = []
+      const routes = []
+      const fileExt = '.jpg'
+      fs.readdirSync('./static/shop/items').forEach((filename) => {
+        if (filename.endsWith(fileExt)) {
+          shopItemIds.push(filename.slice(0, -fileExt.length))
+          routes.push({
+            name: 'haha',
+            route: `/shop/items/` + filename.slice(0, -fileExt.length),
+            payload: {
+              numb: 555,
+            },
+          })
+        }
+      })
+      return routes
+    },
+  },
   // Build configuration
   build: {
     // You can extend webpack config here

@@ -2,11 +2,20 @@
 div
   template(v-for='section, index in sections')
     .section(:class='`${section.class} align-${section.align}`')
+
       h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`.${section.class}`') {{section.title}}
       p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`.${section.class}`') {{section.description}}
+
       .items(:class='section.type')
         template(v-for='item, index in section.items')
-          a.item(:href='item.url' target='_blank' rel='noopener noreferrer' data-aos='fade-up' data-aos-duration='650' :data-aos-delay='200+index*100' :data-aos-anchor='`.${section.class} .items`')
+
+          nuxt-link.item(v-if='item.url.startsWith("/")' :to='item.url' data-aos='fade-up' data-aos-duration='650' :data-aos-delay='200+index*100' :data-aos-anchor='`.${section.class} .items`')
+            .thumbnail-container(v-if='section.type === "text-only"')
+              .thumbnail {{item.thumbnailText}}
+            img.thumbnail(v-else :src='item.src')
+            p.item-text(v-if='item.text') {{item.text}}
+
+          a.item(v-else :href='item.url' target='_blank' rel='noopener noreferrer' data-aos='fade-up' data-aos-duration='650' :data-aos-delay='200+index*100' :data-aos-anchor='`.${section.class} .items`')
             .thumbnail-container(v-if='section.type === "text-only"')
               .thumbnail {{item.thumbnailText}}
             img.thumbnail(v-else :src='item.src')
