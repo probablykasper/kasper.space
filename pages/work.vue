@@ -1,20 +1,19 @@
 <template lang='pug'>
 .page-container
-  ItemsView(:sections='sections')
+  SectionsView(:sections='sections')
 </template>
 
 <script>
-import ItemsView from '~/components/ItemsView.vue'
+import SectionsView from '~/components/SectionsView.vue'
 
 export default {
   components: {
-    ItemsView,
+    SectionsView,
   },
   data: () => ({
     sections: [
       {
         title: 'Development',
-        class: 'development',
         align: 'left',
         description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, CSS, JavaScript, jQuery, Vue.js, Node.js, Python, MySQL, MongoDB, Docker and more.",
         type: 'text-only',
@@ -53,7 +52,6 @@ export default {
       },
       {
         title: 'Video',
-        class: 'video',
         align: 'right',
         description: 'I have made several audio visualizers and lyric videos, as well as over 60 cover art animations for Lowly, a record label with 400 000 YouTube subscribers.',
         type: 'images',
@@ -92,7 +90,6 @@ export default {
       },
       {
         title: 'Lacuna',
-        class: 'lacuna',
         align: 'left',
         description: 'Lacuna is an independent record label I co-run. Our music has over ten million plays across Spotify, Apple Music and YouTube.',
         type: 'square-images',
@@ -133,7 +130,6 @@ export default {
       },
       {
         title: 'Cover Art',
-        class: 'cover-art',
         align: 'right',
         description: 'I make cover art from time to time. You can purchase covers from my Shop.',
         type: 'square-images',
@@ -159,15 +155,15 @@ export default {
             src: require('~/assets/thumbnails/cover-art/voldex-colorblind-feat-cluda.jpg'),
           },
           {
-            url: '',
+            url: '/shop',
             src: require('~/assets/thumbnails/cover-art/backblur-1.jpg'),
           },
           {
-            url: '',
+            url: '/shop',
             src: require('~/assets/thumbnails/cover-art/snow-forest.jpg'),
           },
           {
-            url: '',
+            url: '/shop',
             src: require('~/assets/thumbnails/cover-art/starweb-2.jpg'),
           },
         ],
