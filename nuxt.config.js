@@ -21,7 +21,7 @@ export default {
     },
   },
   // Customize the progress-bar color
-  loading: { color: '#fff' },
+  loading: { color: '#ffffff' },
   // Global CSS
   css: [
     '@/assets/fonts/stylesheet.css',
@@ -31,6 +31,7 @@ export default {
   // Plugins to load before mounting the App
   plugins: [
     { src: '@/plugins/aos.js', ssr: false },
+    { src: '@/plugins/vue-lazyload.js', ssr: false },
   ],
   // Nuxt.js dev-modules
   devModules: [

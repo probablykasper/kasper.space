@@ -15,7 +15,7 @@
       )
         .card-container(:class='section.type')
           .title(v-if='section.type === "text-only"') {{item.thumbnailText}}
-          img(v-else :src='item.src')
+          img(v-else v-lazy='item.src')
         p.bottom-text(v-if='item.text') {{item.text}}
 </template>
 
@@ -113,6 +113,20 @@ $margin: 13px
       img
         width: 100%
         height: 100%
+        transition: opacity 0.2s ease
+        @keyframes fadeIn
+          0%
+            opacity: 0
+          100%
+            opacity: 1
+        &[lazy='loading']
+          width: 50px
+          height: 50px
+          margin: auto
+        &[lazy='loaded']
+          animation-duration: 500ms
+          animation-fill-mode: both
+          animation-name: fadeIn
 
     .bottom-text
       opacity: 0.7
