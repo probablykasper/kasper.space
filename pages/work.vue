@@ -1,16 +1,41 @@
 <template lang='pug'>
 .page-container
   SectionsView(:sections='sections')
+  BackgroundGradient(:colors='colors')
 </template>
 
 <script>
 import SectionsView from '~/components/SectionsView.vue'
+import BackgroundGradient from '~/components/BackgroundGradient.vue'
 
 export default {
   components: {
     SectionsView,
+    BackgroundGradient,
   },
   data: () => ({
+    colors: [
+      [
+        [0, 0, 0], // rgb(0, 0, 0)
+        [0, 0, 0], // rgb(0, 0, 0)
+      ],
+      [
+        [132, 134, 169], // rgb(132, 134, 169)
+        [3, 25, 125], // rgb(3, 25, 125)
+      ],
+      [
+        [181, 125, 167], // rgb(181, 125, 167)
+        [34, 6, 111], // rgb(34, 6, 111)
+      ],
+      [
+        [209, 82, 82], // rgb(209, 82, 82)
+        [102, 0, 102], // rgb(102, 0, 102)
+      ],
+      [
+        [17, 136, 92], // rgb(17, 136, 92)
+        [4, 70, 124], // rgb(4, 70, 124)
+      ],
+    ],
     sections: [
       {
         title: 'Development',
