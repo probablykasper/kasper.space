@@ -1,41 +1,67 @@
 <template lang='pug'>
-  canvas#gradient-background(:style="style")
+  .gradient-background-container
+    canvas#gradient-background
+    .vignette
 </template>
 
 <script>
-function getMiddleground(middlegroundPercent, numOne, numTwo) {
-  const difference = numTwo - numOne
-  const middleground = numOne + difference * middlegroundPercent
-  return Math.round(middleground)
-}
+
+import Granim from 'granim'
 
 export default {
   props: {
-    colors: {
+    gradients: {
       type: Array,
       required: true,
     },
   },
   data() {
     return {
-      scrolled: null,
-      // granimInstance: null,
-      style: {
-        backgroundImage: 'linear-gradient(to bottom right, #000000, #000000)',
-      },
+      granimInstance: null,
     }
   },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
-    console.log('scroll add')
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
-    console.log('scroll remove')
+  },
+  mounted() {
+    this.granimInstance = new Granim({
+      element: '#gradient-background',
+      name: 'granim',
+      opacity: [1, 1],
+      defaultStateName: '0',
+      stateTransitionSpeed: 1000,
+      states: {
+        '0': {
+          gradients: [
+            ['#000000', '#000000'],
+          ],
+        },
+        '1': {
+          gradients: [
+            // ['#8486a9', '#03197c'],
+            ['#424355', '#020D3E'],
+          ],
+        },
+        '2': {
+          gradients: [
+            // ['#d15252', '#660066'],
+            ['#692929', '#330033'],
+          ],
+        },
+        '3': {
+          gradients: [
+            // ['#11885c', '#04467c'],
+            ['#09442E', '#02233E'],
+          ],
+        },
+      },
+    })
   },
   methods: {
     handleScroll(e) {
-      this.scrolled = window.scrollY > 0
       const htmlEl = document.documentElement
 
       const windowHeight = htmlEl.clientHeight
@@ -43,35 +69,22 @@ export default {
       const pageScrollPosition = htmlEl.scrollTop
       const pageScrollPercent = pageScrollPosition / (pageHeight - windowHeight)
 
-      const gradientIndex = pageScrollPercent * (this.colors.length - 1)
-      const gradient1 = this.colors[Math.floor(gradientIndex)]
-      const gradient2 = this.colors[Math.ceil(gradientIndex)]
-      const middleground = gradientIndex % 1
-
-      const r1 = getMiddleground(middleground, gradient1[0][0], gradient2[0][0])
-      const g1 = getMiddleground(middleground, gradient1[0][1], gradient2[0][1])
-      const b1 = getMiddleground(middleground, gradient1[0][2], gradient2[0][2])
-      const rgb1 = `rgb(${r1}, ${g1}, ${b1})`
-
-      const r2 = getMiddleground(middleground, gradient1[1][0], gradient2[1][0])
-      const g2 = getMiddleground(middleground, gradient1[1][1], gradient2[1][1])
-      const b2 = getMiddleground(middleground, gradient1[1][2], gradient2[1][2])
-      const rgb2 = `rgb(${r2}, ${g2}, ${b2})`
-
-      this.style.backgroundImage = `linear-gradient(to bottom right, ${rgb1}, ${rgb2})`
+      const gradientIndex = pageScrollPercent * (this.gradients.length - 1)
+      const newState = String(Math.round(gradientIndex))
+      if (this.granimInstance) this.granimInstance.changeState(newState)
     },
   },
 }
 </script>
 
 <style lang='sass'>
-#gradient-background
+#gradient-background, .vignette
   position: fixed
   top: 0
   left: 0
   width: 100%
   height: 100%
   z-index: -2
-  opacity: 0.5
-  box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 0.5)
+.vignette
+  box-shadow: inset 0px 0px 100px 0px rgba(#000000, 0.4)
 </style>

@@ -1,7 +1,7 @@
 <template lang='pug'>
 .page-container
   SectionsView(:sections='sections')
-  BackgroundGradient(:colors='colors')
+  BackgroundGradient(:gradients='gradients')
 </template>
 
 <script>
@@ -14,27 +14,14 @@ export default {
     BackgroundGradient,
   },
   data: () => ({
-    colors: [
-      [
-        [0, 0, 0], // rgb(0, 0, 0)
-        [0, 0, 0], // rgb(0, 0, 0)
-      ],
-      [
-        [132, 134, 169], // rgb(132, 134, 169)
-        [3, 25, 125], // rgb(3, 25, 125)
-      ],
-      [
-        [181, 125, 167], // rgb(181, 125, 167)
-        [34, 6, 111], // rgb(34, 6, 111)
-      ],
-      [
-        [209, 82, 82], // rgb(209, 82, 82)
-        [102, 0, 102], // rgb(102, 0, 102)
-      ],
-      [
-        [17, 136, 92], // rgb(17, 136, 92)
-        [4, 70, 124], // rgb(4, 70, 124)
-      ],
+    gradients: [
+      ['#000000', '#000000'],
+      // ['#8486a9', '#03197c'],
+      ['#424355', '#020D3E'],
+      // ['#d15252', '#660066'],
+      ['#692929', '#330033'],
+      // ['#11885c', '#04467c'],
+      ['#09442E', '#02233E'],
     ],
     sections: [
       {
