@@ -1,5 +1,5 @@
 <template lang='pug'>
-  .page-container.centered-page
+  CenterView
     h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | Contact
     p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
@@ -8,6 +8,16 @@
       a(href='mailto:kasperkh.kh@gmail.com')
         .text kasperkh.kh@gmail.com
 </template>
+
+<script>
+import CenterView from '~/components/CenterView.vue'
+
+export default {
+  components: {
+    CenterView,
+  },
+}
+</script>
 
 <style lang="sass" scoped>
 .page-container

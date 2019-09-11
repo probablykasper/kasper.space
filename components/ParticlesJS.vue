@@ -81,6 +81,7 @@ export default {
 
 <style lang="sass" scoped>
 #particles-js
+  pointer-events: none
   position: fixed
   top: 0
   left: 0
@@ -88,5 +89,5 @@ export default {
   height: 100%
   z-index: 20
   canvas
-    vertical-align: bottom;
+    vertical-align: bottom
 </style>

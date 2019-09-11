@@ -3,7 +3,6 @@
     ParticlesJS
     Header
     nuxt#page-container
-    #bottom-header-compensation
     Splash
 </template>
 
@@ -33,34 +32,23 @@ html
   max-width: 1300px
   margin-left: auto
   margin-right: auto
-  overflow-y: scroll
-  overflow-x: hidden
-body
+#layout-container
   margin: 0px 6%
-  position: relative
 
 .page-container > *:not(.gradient-background-container)
   position: relative
   z-index: 30
 
-// for enabling veritcally centered pages
-html, body, #__nuxt, #__layout, #layout-container
-  height: 100%
+// hide scrollbars when elements are transformed outside the viewport (aos.js)
+html
+  overflow-x: hidden
+  overflow-y: scroll
+body
+  overflow: hidden
+
 #layout-container
   display: flex
   flex-direction: column
-  #page-container
-    flex-grow: 1
-  #page-container.centered-page
-    display: flex
-    justify-content: center
-    flex-direction: column
-    text-align: center
-  #bottom-header-compensation
-    min-height: 50px
-    height: 10%
-    max-height: calc(60px + 50px*2)
-    flex-grow: 1
 
 svg, img // remove 4px bottom space
   vertical-align: bottom

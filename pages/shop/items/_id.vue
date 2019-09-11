@@ -1,12 +1,17 @@
 <template lang='pug'>
-  .page-container.centered-page
+  CenterView
     p Hi
     p {{id}}
     img(:src='item')
 </template>
 
 <script>
+import CenterView from '~/components/CenterView.vue'
+
 export default {
+  components: {
+    CenterView,
+  },
   data() {
     return {
       id: this.$route.params.id,
