@@ -3,8 +3,8 @@ div
   template(v-for='section, index in sections')
     .section(:class='`align-${section.align}`' :id='`section-${index}`')
 
-      h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`.${section.class}`') {{section.title}}
-      p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`.${section.class}`') {{section.description}}
+      h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`#section-${index}`') {{section.title}}
+      p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`#section-${index}`') {{section.description}}
 
       SectionsViewItems(:section='section' :sectionId='`section-${index}`')
 </template>
@@ -25,7 +25,6 @@ export default {
   methods: {
     getAOS(element, align) {
       if (element === 'title') {
-        // eslint-disable-next-line curly
         if (align === 'left') return 'fade-right'
         if (align === 'right') return 'fade-left'
         if (align === 'center') return 'zoom-out'
