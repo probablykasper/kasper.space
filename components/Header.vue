@@ -103,7 +103,7 @@ export default {
         @media screen and (max-width: 550px)
           font-size: 95%
           padding: 8px 15px
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         opacity: 0.7
         font-size: 105%
         font-weight: 500

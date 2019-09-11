@@ -67,7 +67,9 @@ $margin: 13px
     margin: $margin
 
     .bottom-text, .card-container, .title
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+      transition-property: transform, opacity, background-color, box-shadow
+      transition-duration: 0.2s
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
     &:hover
       .bottom-text, .card-container
         transform: translateY(-4px)
