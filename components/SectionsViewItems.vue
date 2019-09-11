@@ -98,6 +98,11 @@ $margin: 13px
       background-color: #181b25
       border-radius: 5px
       overflow: hidden
+      // 2dp:
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
+      &:hover
+        // 5dp:
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12)
 
       .title
         opacity: 0.7
