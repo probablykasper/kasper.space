@@ -34,8 +34,14 @@ html
   margin-left: auto
   margin-right: auto
   overflow-y: scroll
+  overflow-x: hidden
 body
   margin: 0px 6%
+  position: relative
+
+.page-container > *:not(.gradient-background-container)
+  position: relative
+  z-index: 30
 
 // for enabling veritcally centered pages
 html, body, #__nuxt, #__layout, #layout-container

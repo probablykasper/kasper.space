@@ -77,14 +77,14 @@ export default {
 }
 </script>
 
-<style lang='sass'>
+<style lang='sass' scoped>
 #gradient-background, .vignette
   position: fixed
   top: 0
   left: 0
+  z-index: 10
   width: 100%
   height: 100%
-  z-index: -2
 .vignette
   box-shadow: inset 0px 0px 100px 0px rgba(#000000, 0.4)
 </style>

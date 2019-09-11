@@ -34,6 +34,7 @@ export default {
   justify-content: space-between
   align-content: center
   margin: 50px 0px
+  z-index: 30
   @media screen and (max-width: 450px)
     flex-direction: column
     align-items: left
