@@ -2,11 +2,10 @@
   .loading-container(:class='{ loaded: hasLoaded, hidden: hidden }')
     .middle
       LogoFilled.logo
-      p kasper.space
 </template>
 
 <script>
-import LogoFilled from '~/assets/logo/2019 Lines.svg'
+import LogoFilled from '~/assets/logo/2019 Lines Plus Text.svg'
 
 export default {
   components: {
@@ -54,8 +53,8 @@ export default {
     display: none
 
 svg.logo
-  width: 120px
-  height: 120px
+  width: 160px
+  height: 160px
 
 p
   font-size: 24px
