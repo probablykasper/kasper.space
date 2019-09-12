@@ -27,37 +27,21 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   mounted() {
+    const states = {}
+    this.gradients.forEach((gradient, i) => {
+      states[i.toString()] = {
+        gradients: [
+          gradient,
+        ],
+      }
+    })
     this.granimInstance = new Granim({
       element: '#gradient-background',
       name: 'granim',
       opacity: [1, 1],
       defaultStateName: '0',
       stateTransitionSpeed: 1000,
-      states: {
-        '0': {
-          gradients: [
-            ['#000000', '#000000'],
-          ],
-        },
-        '1': {
-          gradients: [
-            // ['#8486a9', '#03197c'],
-            ['#424355', '#020D3E'],
-          ],
-        },
-        '2': {
-          gradients: [
-            // ['#d15252', '#660066'],
-            ['#692929', '#330033'],
-          ],
-        },
-        '3': {
-          gradients: [
-            // ['#11885c', '#04467c'],
-            ['#09442E', '#02233E'],
-          ],
-        },
-      },
+      states,
     })
   },
   methods: {

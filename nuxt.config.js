@@ -69,6 +69,7 @@ export default {
   build: {
     // You can extend webpack config here
     extend(config, ctx) {
+      if (ctx.isClient) config.devtool = 'source-map'
       // svg
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
       svgRule.test = /\.(png|jpe?g|gif|webp)$/
