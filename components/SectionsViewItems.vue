@@ -138,10 +138,6 @@ $margin: 13px
             opacity: 0
           100%
             opacity: 1
-        &[lazy='loading']
-          width: 50px
-          height: 50px
-          margin: auto
         &[lazy='loaded']
           animation-duration: 500ms
           animation-fill-mode: both
