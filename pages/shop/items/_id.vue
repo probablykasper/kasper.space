@@ -1,29 +1,51 @@
 <template lang='pug'>
-  CenterView
-    .container
-      img.row(:src='item' data-aos='fade-right' data-aos-duration='650' data-aos-delay='0')
-      img.column(:src='item' data-aos='fade-up' data-aos-duration='650' data-aos-delay='0')
-      .right-side
-        h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0') Cover Art {{id}}
-        p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
-          | Please contact me at
-          a(href='mailto:kasperkh.kh@gmail.com')
-            .text kasperkh.kh@gmail.com
-          | if you're interested in the cover.
+  .page-container
+    CenterView
+      .container
+        img.row(:src='imageSrc' data-aos='fade-right' data-aos-duration='650' data-aos-delay='0')
+        img.column(:src='imageSrc' data-aos='fade-up' data-aos-duration='650' data-aos-delay='0')
+        .right-side
+          h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0') Cover Art {{id}}
+          p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
+            | Please contact me at
+            a(href='mailto:kasperkh.kh@gmail.com')
+              .text kasperkh.kh@gmail.com
+            | if you're interested in the cover.
+    .background-gradient(:style='`background-image: ${backgroundGradient}`')
 </template>
 
 <script>
+import * as Vibrant from 'node-vibrant'
+
 import CenterView from '~/components/CenterView.vue'
+
+import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
   components: {
     CenterView,
   },
   data() {
+    const imageSrc = '/shop/items/' + this.$route.params.id + '.jpg'
     return {
+      backgroundGradient: 'linear-gradient(to bottom right, #000000, #000000)',
       id: this.$route.params.id,
-      item: '/shop/items/' + this.$route.params.id + '.jpg',
+      imageSrc,
     }
+  },
+  created() {
+    this.getBackgroundGradient()
+  },
+  methods: {
+    getBackgroundGradient() {
+      Vibrant.from(this.imageSrc).getPalette().then((palette) => {
+        const swatch = palette.DarkVibrant
+        const rgb1 = `${swatch.r * 0.75}, ${swatch.g * 0.75}, ${swatch.b * 0.75}`
+        const rgb2 = `${swatch.r * 0.2}, ${swatch.g * 0.2}, ${swatch.b * 0.2}`
+        const background = `linear-gradient(to bottom right, rgb(${rgb1}), rgba(${rgb2}))`
+        EventBus.$emit('page-background-update', background)
+      })
+    },
   },
 }
 </script>

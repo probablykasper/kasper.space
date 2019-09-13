@@ -3,6 +3,7 @@
     ParticlesJS
     Header
     nuxt#page-container
+    PageBackgroundGradient
     Splash
 </template>
 
@@ -10,17 +11,19 @@
 import Splash from '~/components/Splash.vue'
 import Header from '~/components/Header.vue'
 import ParticlesJS from '~/components/ParticlesJS.vue'
+import PageBackgroundGradient from '~/components/PageBackgroundGradient.vue'
 
 export default {
   components: {
     Header,
     Splash,
     ParticlesJS,
+    PageBackgroundGradient,
   },
 }
 </script>
 
-<style lang="sass">
+<style lang='sass'>
 html
   font-family: Lato, Rubik, 'Open Sans', Roboto, Arial, sans-serif
   color: #ffffff

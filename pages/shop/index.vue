@@ -5,6 +5,7 @@
 
 <script>
 import SectionsView from '~/components/SectionsView.vue'
+import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
   components: {
@@ -31,6 +32,9 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    EventBus.$emit('page-background-remove', '#000000')
   },
 }
 </script>

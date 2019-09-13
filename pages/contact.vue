@@ -11,15 +11,19 @@
 
 <script>
 import CenterView from '~/components/CenterView.vue'
+import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
   components: {
     CenterView,
   },
+  mounted() {
+    EventBus.$emit('page-background-remove', '#000000')
+  },
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang='sass' scoped>
 .page-container
   white-space: pre-wrap
   a
