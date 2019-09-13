@@ -1,6 +1,6 @@
 <template lang='pug'>
 .page-container
-  SectionsView(:sections='sections')
+  SectionsView(:sections='sections' itemAos='fade-up' :itemAosDuration='100' :itemAosConstant='200')
   BackgroundGradient(:gradients='gradients')
 </template>
 

@@ -8,9 +8,9 @@
         :target='isNuxtLink(item.url) ? null : "_blank"'
         :rel='isNuxtLink(item.url) ? null : "noopener noreferrer"'
         :class='section.type'
-        data-aos='fade-up'
-        data-aos-duration='650'
-        :data-aos-delay='200+index*100'
+        :data-aos='itemAos'
+        :data-aos-duration='650'
+        :data-aos-delay='itemAosConstant+index*itemAosDuration'
         :data-aos-anchor='`#${sectionId} .items`'
       )
         .card-container(:class='section.type')
@@ -28,6 +28,18 @@ export default {
     },
     sectionId: {
       type: String,
+      required: true,
+    },
+    itemAos: {
+      type: String,
+      required: true,
+    },
+    itemAosDuration: {
+      type: Number,
+      required: true,
+    },
+    itemAosConstant: {
+      type: Number,
       required: true,
     },
   },

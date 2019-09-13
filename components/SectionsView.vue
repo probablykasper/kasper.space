@@ -6,7 +6,7 @@ div
       h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`#section-${index}`') {{section.title}}
       p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`#section-${index}`') {{section.description}}
 
-      SectionsViewItems(:section='section' :sectionId='`section-${index}`')
+      SectionsViewItems(:section='section' :sectionId='`section-${index}`' :itemAos='itemAos' :itemAosDuration='itemAosDuration' :itemAosConstant='itemAosConstant')
 </template>
 
 <script>
@@ -19,6 +19,18 @@ export default {
   props: {
     sections: {
       type: Array,
+      required: true,
+    },
+    itemAos: {
+      type: String,
+      required: true,
+    },
+    itemAosDuration: {
+      type: Number,
+      required: true,
+    },
+    itemAosConstant: {
+      type: Number,
       required: true,
     },
   },

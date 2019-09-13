@@ -1,6 +1,6 @@
 <template lang='pug'>
 .page-container
-  SectionsView(:sections='sections')
+  SectionsView(:sections='sections' itemAos='fade' :itemAosDuration='0' :itemAosConstant='0')
 </template>
 
 <script>
