@@ -43,8 +43,7 @@ export default {
       } else if (element === 'description') {
         if (align === 'left') return 'zoom-in-right'
         if (align === 'right') return 'zoom-in-left'
-        if (align === 'center') return 'zoom-in'
-        if (align === 'center') return 'zoom-in-up'
+        if (align === 'center') return 'zoom-out'
       }
     },
   },

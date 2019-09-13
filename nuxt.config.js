@@ -56,9 +56,6 @@ export default {
           routes.push({
             name: 'haha',
             route: `/shop/items/` + filename.slice(0, -fileExt.length),
-            payload: {
-              numb: 555,
-            },
           })
         }
       })
