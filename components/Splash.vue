@@ -17,16 +17,20 @@ export default {
       hidden: false,
     }
   },
+  beforeMount() {
+    document.documentElement.style.pointerEvents = 'none'
+  },
   mounted() {
     setTimeout(() => {
+      document.documentElement.style.pointerEvents = ''
       this.hasLoaded = true
-      setTimeout(() => {
-        this.hidden = true
-      }, 500)
       const event = document.createEvent('HTMLEvents')
       event.initEvent('aos-start', true, true)
       event.eventName = 'aos-start'
       document.dispatchEvent(event)
+      setTimeout(() => {
+        this.hidden = true
+      }, 500)
     }, 1000)
   },
 }
