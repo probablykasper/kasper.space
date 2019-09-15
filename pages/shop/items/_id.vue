@@ -2,22 +2,22 @@
   .page-container
     CenterView
       .top
-        nuxt-link.previous(
-          :is='previousId ? "nuxt-link" : "a"'
-          :to='previousId ? "/shop/items/" + previousId : null'
-          :class='{disabled: !previousId}'
-        )
-          ChevronIcon(data-aos='fade' data-aos-duration='400' data-aos-delay='0')
+        .previous(:class='{disabled: !previousId}')
+          nuxt-link(
+            :is='previousId ? "nuxt-link" : "a"'
+            :to='previousId ? "/shop/items/" + previousId : null'
+          )
+            ChevronIcon(data-aos='fade' data-aos-duration='200' data-aos-delay='0')
         .text-container
           h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0') Cover Art {{id}}
           p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
             | Please contact me at #[a(href='mailto:kasperkh.kh@gmail.com') #[.text kasperkh.kh@gmail.com]] if you're interested in the cover.
-        nuxt-link.next(
-          :is='nextId ? "nuxt-link" : "a"'
-          :to='nextId ? "/shop/items/" + nextId : null'
-          :class='{disabled: !nextId}'
-        )
-          ChevronIcon(data-aos='fade' data-aos-duration='400' data-aos-delay='0')
+        .next(:class='{disabled: !nextId}')
+          nuxt-link(
+            :is='nextId ? "nuxt-link" : "a"'
+            :to='nextId ? "/shop/items/" + nextId : null'
+          )
+            ChevronIcon(data-aos='fade' data-aos-duration='200' data-aos-delay='0')
       img(:src='imageSrc' data-aos='fade-up' data-aos-duration='650' data-aos-delay='0')
     .background-gradient(:style='`background-image: ${backgroundGradient}`')
 </template>
@@ -80,6 +80,7 @@ export default {
 <style lang='sass' scoped>
 
 $svg-container-size: 50px
+$svg-width: 28px
 
 .top
   display: flex
@@ -87,19 +88,24 @@ $svg-container-size: 50px
   max-width: calc(500px + 2*#{$svg-container-size})
   margin-bottom: 30px
   .previous, .next
-    width: $svg-container-size
+    padding-right: $svg-container-size - $svg-width
     align-self: center
     flex-shrink: 0.5
     user-select: none
-    padding: 5px 0px
     &.disabled
       opacity: 0.4
       cursor: default
-    svg
-      fill: #ffffff
-      display: block
-      width: 28px
-      margin-right: auto
+      transform: none
+    &:not(.disabled) a:hover
+      svg
+        transform: translateX(-3px) scaleY(1.15)
+    a
+      svg
+        width: 28px
+        padding: 5px 0px
+        fill: #ffffff
+        display: block
+        transition: opacity 0.4s ease, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
   .next
     transform: rotate(180deg)
   .text-container
