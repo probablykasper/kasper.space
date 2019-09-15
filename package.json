@@ -13,7 +13,7 @@
     "deploy": "npm version"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.9.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

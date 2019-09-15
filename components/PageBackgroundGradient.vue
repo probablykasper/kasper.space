@@ -24,12 +24,11 @@ export default {
     switchBackgroundGradient(backgroundImage) {
       // remove current gradient background
       const currentGradient = this.$el.querySelector('.background-gradient.visible')
-      if (currentGradient) {
-        // currentGradient.classList.remove('visible')
-        setTimeout(() => {
+      setTimeout(() => {
+        if (currentGradient && currentGradient.parentNode) {
           currentGradient.parentNode.removeChild(currentGradient)
-        }, 1000)
-      }
+        }
+      }, 1000)
       // add new gradient background
       const newGradient = document.createElement('div')
       newGradient.classList.add('background-gradient')

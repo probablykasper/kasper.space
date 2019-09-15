@@ -2,7 +2,7 @@
   div#layout-container
     ParticlesJS
     Header
-    nuxt#page-container
+    nuxt
     PageBackgroundGradient
     Splash
 </template>

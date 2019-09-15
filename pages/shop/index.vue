@@ -21,13 +21,20 @@ export default {
           type: 'square-images',
           items: (function() {
             const images = require.context('~/static/shop/items/', true, /\.jpg$/)
-            const imagesArray = Array.from(images.keys())
+            const imagePaths = Array.from(images.keys())
             const fileExt = '.jpg'
-            const itemsArray = imagesArray.map(value => ({
-              url: '/shop/items/' + value.slice(2, -fileExt.length),
-              src: require('~/static/shop/items/' + value.slice(2)),
+            const ids = imagePaths.map((value) => {
+              // remove ./ from start and .jpg from end
+              return Number(value.slice(2, -fileExt.length))
+            })
+            ids.sort((a, b) => {
+              return a - b
+            })
+            const items = ids.map(value => ({
+              url: '/shop/items/' + value,
+              src: require('~/static/shop/items/' + value + fileExt),
             }))
-            return itemsArray
+            return items
           })(),
         },
       ],
