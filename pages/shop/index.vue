@@ -18,7 +18,7 @@ export default {
           title: 'Cover Art',
           align: 'center',
           description: 'I make cover art from time to time. You can purchase covers from my Shop.',
-          type: 'square-images',
+          type: 'square-images-all',
           items: (function() {
             const images = require.context('~/static/shop/items/', true, /\.jpg$/)
             const imagePaths = Array.from(images.keys())

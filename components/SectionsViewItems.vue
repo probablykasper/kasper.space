@@ -97,11 +97,11 @@ $margin: 13px
       @media screen and (max-width: 900px)
         width: calc(100%/2 - 2*#{$margin})
 
-    &.square-images
+    &.square-images, &.square-images-all
       width: calc(100%/4 - 2*#{$margin})
       @media screen and (max-width: 900px)
         width: calc(100%/3 - 2*#{$margin})
-        &:nth-child(n+7)
+        &:nth-child(n+7):not(.square-images-all)
           display: none
       @media screen and (max-width: 380px)
         width: calc(100%/2 - 2*#{$margin})
@@ -126,7 +126,7 @@ $margin: 13px
 
       &.images
         @include aspect-ratio(16, 9)
-      &.square-images
+      &.square-images, &.square-images-all
         @include aspect-ratio(1, 1)
 
       img
