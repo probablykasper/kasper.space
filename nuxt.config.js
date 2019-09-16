@@ -21,7 +21,7 @@ export default {
     },
   },
   // Customize the progress-bar color
-  // loading: { color: '#ffffff' },
+  loading: { color: '#ffffff' },
   loadingIndicator: '~/assets/loading.html',
   // Global CSS
   css: [
@@ -34,11 +34,6 @@ export default {
     { src: '@/plugins/aos.js', ssr: false },
     { src: '@/plugins/vue-lazyload.js', ssr: false },
   ],
-  // Nuxt.js dev-modules
-  devModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-  ],
   // Nuxt.js modules
   modules: [
     ['@nuxtjs/google-analytics', {
@@ -46,6 +41,8 @@ export default {
     }],
   ],
   buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
   ],
   generate: {
     routes() {
