@@ -9,6 +9,9 @@ import CenterView from '~/components/CenterView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
+  head: {
+    title: 'kasper.space',
+  },
   components: {
     CenterView,
   },

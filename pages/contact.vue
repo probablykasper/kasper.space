@@ -14,6 +14,9 @@ import CenterView from '~/components/CenterView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
+  head: {
+    title: 'Contact - kasper.space',
+  },
   components: {
     CenterView,
   },

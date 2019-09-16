@@ -7,7 +7,7 @@
     .header-compensation
 </template>
 
-<style lang="sass" scoped>
+<style lang='sass' scoped>
 .page-container
   position: absolute
   min-height: 100%

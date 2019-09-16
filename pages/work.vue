@@ -10,6 +10,9 @@ import BackgroundGradient from '~/components/BackgroundGradient.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
+  head: {
+    title: 'Work - kasper.space',
+  },
   components: {
     SectionsView,
     BackgroundGradient,

@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang='sass' scoped>
 .section
   position: relative
   padding-bottom: 100px

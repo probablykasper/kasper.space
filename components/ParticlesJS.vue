@@ -79,7 +79,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang='sass' scoped>
 #particles-js
   pointer-events: none
   position: fixed

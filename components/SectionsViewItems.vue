@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang='sass' scoped>
 
 @mixin aspect-ratio($width, $height)
   position: relative

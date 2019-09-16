@@ -9,7 +9,7 @@
           )
             ChevronIcon(data-aos='fade' data-aos-duration='200' data-aos-delay='0')
         .text-container
-          h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0') Cover Art {{id}}
+          h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0') {{title}}
           p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
             | Please contact me at #[a(href='mailto:kasperkh.kh@gmail.com') #[.text kasperkh.kh@gmail.com]] if you're interested in the cover.
         .next(:class='{disabled: !nextId}')
@@ -29,6 +29,11 @@ import ChevronIcon from '~/assets/icons/chevron.svg'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
+  head() {
+    return {
+      title: this.title + ' - kasper.space',
+    }
+  },
   components: {
     CenterView,
     ChevronIcon,
@@ -55,6 +60,7 @@ export default {
     return {
       backgroundGradient: 'linear-gradient(to bottom right, #000000, #000000)',
       id: this.$route.params.id,
+      title: 'Cover Art ' + this.$route.params.id,
       imageSrc: '/shop/items/' + this.$route.params.id + '.jpg',
       previousId,
       nextId,

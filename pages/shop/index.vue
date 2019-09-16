@@ -8,6 +8,9 @@ import SectionsView from '~/components/SectionsView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
+  head: {
+    title: 'Shop - kasper.space',
+  },
   components: {
     SectionsView,
   },
