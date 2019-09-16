@@ -18,15 +18,20 @@ export default {
     removeBackgroundGradient() {
       const visibleGradients = this.$el.querySelectorAll('.background-gradient.visible')
       for (const gradient of visibleGradients) {
-        if (gradient) gradient.classList.remove('visible')
+        if (gradient.parentNode) gradient.classList.remove('visible')
+        setTimeout(() => {
+          if (gradient && gradient.parentNode) gradient.parentNode.removeChild(gradient)
+        }, 1000)
       }
     },
     switchBackgroundGradient(backgroundImage) {
       // remove current gradient background
-      const currentGradient = this.$el.querySelector('.background-gradient.visible')
+      const currentGradients = this.$el.querySelectorAll('.background-gradient.visible')
       setTimeout(() => {
-        if (currentGradient && currentGradient.parentNode) {
-          currentGradient.parentNode.removeChild(currentGradient)
+        for (const gradient of currentGradients) {
+          if (gradient && gradient.parentNode) {
+            gradient.parentNode.removeChild(gradient)
+          }
         }
       }, 1000)
       // add new gradient background
