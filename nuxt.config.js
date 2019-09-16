@@ -21,7 +21,8 @@ export default {
     },
   },
   // Customize the progress-bar color
-  loading: { color: '#ffffff' },
+  // loading: { color: '#ffffff' },
+  loadingIndicator: '~/assets/loading.html',
   // Global CSS
   css: [
     '@/assets/fonts/stylesheet.css',
