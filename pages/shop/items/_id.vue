@@ -95,7 +95,6 @@ $svg-width: 28px
     &.disabled
       opacity: 0.4
       cursor: default
-      transform: none
     &:not(.disabled) a:hover
       svg
         transform: translateX(-3px) scaleY(1.15)
