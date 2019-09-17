@@ -5,13 +5,22 @@ export default {
   // Headers of the page
   head: {
     title: process.env.npm_package_name || '',
+    link: [
+      // favicon stuff:
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=siphonophore' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=siphonophore' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=siphonophore' },
+      { rel: 'manifest', href: '/site.webmanifest?v=siphonophore' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=siphonophore', color: '#181b25' },
+      { rel: 'shortcut icon', href: '/favicon.ico?v=siphonophore' },
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // favicon stuff:
+      { name: 'msapplication-TileColor', content: '#000000' },
+      { name: 'theme-color', content: '#000000' },
     ],
     htmlAttrs: {
       lang: 'en-US',
