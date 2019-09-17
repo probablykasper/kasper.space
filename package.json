@@ -7,10 +7,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint-fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
-    "precommit": "npm run lint",
     "start": "nuxt --hostname 0.0.0.0",
-    "build": "nuxt generate",
-    "deploy": "npm version"
+    "build": "nuxt generate"
   },
   "dependencies": {
     "nuxt": "^2.9.2"

@@ -1,5 +1,7 @@
 # v6.kasper.space
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9f7d228-db14-4dc5-97f2-7a2e25675b65/deploy-status)](https://app.netlify.com/sites/kasper-space/deploys)
+
 v6 of my personal website
 
 ## Dev Instructions
@@ -13,6 +15,8 @@ I recommend using the [VSCode](https://code.visualstudio.com) text editor with t
 
 The website is built with [Nuxt.js](https://nuxtjs.org) and [Vue.js](https://vuejs.org/).
 
+The master branch is continually deployed through [Netlify](https://netlify.com).
+
 ### Commands
 
 Start dev server:
@@ -25,12 +29,6 @@ Build into /dist:
 
 ```
 $ npm run build
-```
-
-Build and commit with a tag, which will trigger deployment. `<version>` can be `patch`, `minor`, `major` or a specific version number:
-
-```
-$ npm run deploy <version>
 ```
 
 Lint the project:
