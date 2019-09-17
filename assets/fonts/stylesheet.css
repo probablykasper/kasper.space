@@ -83,7 +83,7 @@
 		url('./lato/lato-v16-latin-regular.svg#Lato') format('svg');
 }
 
-/* @font-face {
+/@font-face {
 	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 700;
@@ -96,7 +96,7 @@
 		url('./lato/lato-v16-latin-700.svg#Lato') format('svg');
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 900;

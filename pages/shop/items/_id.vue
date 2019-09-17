@@ -129,6 +129,8 @@ $svg-width: 28px
       display: inline-block
       position: relative
       padding: 3px
+      color: #ebebef
+      font-weight: bold
       .text
         display: inline-block
         transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)

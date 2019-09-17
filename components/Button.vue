@@ -37,7 +37,7 @@ export default {
 <style lang='sass'>
 .button-container
   display: inline-block
-  margin-bottom: 20px
+  margin-bottom: 30px
   user-select: none
   $svg-size: 18px
   $spacing: 8px

@@ -3,10 +3,7 @@
     h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | Contact
     p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
-      | You can reach me at
-      |
-      a(href='mailto:kasperkh.kh@gmail.com')
-        .text kasperkh.kh@gmail.com
+      | You can reach me at #[a(href='mailto:kasperkh.kh@gmail.com') #[.text kasperkh.kh@gmail.com]] or on #[a(href='https://facebook.com/kasper.space') #[.text Facebook]].
 </template>
 
 <script>
@@ -33,8 +30,11 @@ export default {
     display: inline-block
     position: relative
     padding: 3px
+    color: #ebebef
+    font-weight: bold
     .text
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+      display: inline-block
     &::after
       content: ''
       position: absolute
