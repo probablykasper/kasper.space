@@ -5,16 +5,34 @@ div
 
       h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`#section-${index}`') {{section.title}}
       p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`#section-${index}`') {{section.description}}
+      Button(v-if='section.title === "Development"' text='GitHub' url='https://github.com/probablykasper')
+        GitHubIcon
+      Button(v-if='section.title === "Video"' text='See More' url='https://www.youtube.com/playlist?list=PL84-DNDSU8p5WP6jA7hvOCV9dIKBNjdCS')
+        YouTubeIcon
+      Button(v-if='section.title === "Lacuna"' text='Website' url='https://lacuna.to')
+        LacunaIcon
+      Button(v-if='section.title === "Cover Art"' text='Shop' url='/shop')
+        ShopIcon
 
       SectionsViewItems(:section='section' :sectionId='`section-${index}`' :itemAos='itemAos' :itemAosDuration='itemAosDuration' :itemAosConstant='itemAosConstant')
 </template>
 
 <script>
 import SectionsViewItems from '~/components/SectionsViewItems.vue'
+import Button from '~/components/Button.vue'
+import GitHubIcon from '~/assets/icons/github.svg'
+import YouTubeIcon from '~/assets/icons/youtube.svg'
+import LacunaIcon from '~/assets/icons/lacuna.svg'
+import ShopIcon from '~/assets/icons/shop.svg'
 
 export default {
   components: {
     SectionsViewItems,
+    Button,
+    GitHubIcon,
+    YouTubeIcon,
+    LacunaIcon,
+    ShopIcon,
   },
   props: {
     sections: {
@@ -55,13 +73,13 @@ export default {
   position: relative
   padding-bottom: 100px
   &.align-center
+    text-align: center
     .section-title, .section-description
-      text-align: center
       margin-left: auto
       margin-right: auto
   &.align-right
+    text-align: right
     .section-title, .section-description
-      text-align: right
       margin-left: auto
   .section-description
     @media screen and (max-width: 600px)

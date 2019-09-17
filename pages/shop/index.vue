@@ -18,7 +18,7 @@ export default {
     return {
       sections: [
         {
-          title: 'Cover Art',
+          title: 'Cover Art Shop',
           align: 'center',
           description: 'I make cover art from time to time. You can purchase covers from my Shop.',
           type: 'square-images-all',
