@@ -48,7 +48,7 @@ export default {
       return Number(value.slice(2, -fileExt.length))
     })
     ids.sort((a, b) => {
-      return a - b
+      return b - a
     })
     let previousId, nextId
     for (let i = 0; i < ids.length; i++) {

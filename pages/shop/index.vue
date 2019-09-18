@@ -31,7 +31,7 @@ export default {
               return Number(value.slice(2, -fileExt.length))
             })
             ids.sort((a, b) => {
-              return a - b
+              return b - a
             })
             const items = ids.map(value => ({
               url: '/shop/items/' + value,
