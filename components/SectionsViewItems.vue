@@ -72,7 +72,8 @@ $margin: 13px
 .items
   display: flex
   flex-wrap: wrap
-  margin: 0px -$margin
+  margin-left: -$margin
+  margin-right: -$margin
 
   .item
     display: inline-block

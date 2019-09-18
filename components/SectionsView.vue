@@ -5,13 +5,13 @@ div
 
       h1.section-title(:data-aos='getAOS("title", section.align)' data-aos-duration='800' data-aos-delay='0' :data-aos-anchor='`#section-${index}`') {{section.title}}
       p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`#section-${index}`') {{section.description}}
-      Button(v-if='section.title === "Development"' text='GitHub' url='https://github.com/probablykasper')
+      Button.button(v-if='section.title === "Development"' text='GitHub' url='https://github.com/probablykasper')
         GitHubIcon
-      Button(v-if='section.title === "Video"' text='See More' url='https://www.youtube.com/playlist?list=PL84-DNDSU8p5WP6jA7hvOCV9dIKBNjdCS')
+      Button.button(v-if='section.title === "Video"' text='See More' url='https://www.youtube.com/playlist?list=PL84-DNDSU8p5WP6jA7hvOCV9dIKBNjdCS')
         YouTubeIcon
-      Button(v-if='section.title === "Lacuna"' text='Website' url='https://lacuna.to')
+      Button.button(v-if='section.title === "Lacuna"' text='Website' url='https://lacuna.to')
         LacunaIcon
-      Button(v-if='section.title === "Cover Art"' text='Shop' url='/shop')
+      Button.button(v-if='section.title === "Cover Art"' text='Shop' url='/shop')
         ShopIcon
 
       SectionsViewItems(:section='section' :sectionId='`section-${index}`' :itemAos='itemAos' :itemAosDuration='itemAosDuration' :itemAosConstant='itemAosConstant')
@@ -85,5 +85,7 @@ export default {
     @media screen and (max-width: 600px)
       font-size: 14px
     max-width: 540px
+    margin-bottom: 20px
+  .button
     margin-bottom: 20px
 </style>

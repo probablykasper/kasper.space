@@ -20,7 +20,7 @@ export default {
         {
           title: 'Cover Art Shop',
           align: 'center',
-          description: 'I make cover art from time to time. You can purchase covers from my Shop.',
+          description: '',
           type: 'square-images-all',
           items: (function() {
             const images = require.context('~/static/shop/items/', true, /\.jpg$/)
