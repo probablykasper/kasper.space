@@ -18,7 +18,8 @@
             :to='nextId ? "/shop/items/" + nextId : null'
           )
             ChevronIcon(data-aos='fade' data-aos-duration='200' data-aos-delay='0')
-      img(:src='imageSrc' data-aos='fade-up' data-aos-duration='650' data-aos-delay='0')
+      .image-container(data-aos='fade-up' data-aos-duration='650' data-aos-delay='0')
+        img(v-lazy='imageSrc')
     .background-gradient(:style='`background-image: ${backgroundGradient}`')
 </template>
 
@@ -154,11 +155,33 @@ $svg-width: 28px
         &::after
           transform: translateY($moveVertically) scaleX(1)
           opacity: 1
-img
-  min-width: 0px
-  width: 500px
-  max-width: calc(85% + 20px)
+@mixin aspect-ratio($width, $height)
+  position: relative
+  display: block
+  &::before
+    display: block
+    content: ""
+    width: 100%
+    padding-top: ($height / $width) * 100%
+  > img, > div
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+.image-container
+  max-width: 500px
+  background-color: #181b25
+  @include aspect-ratio(1, 1)
   margin: auto
+  min-width: 0px
   // 2dp:
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
+  img
+    margin: auto
+    max-width: 100%
+    &[lazy='loaded']
+      animation-duration: 500ms
+      animation-fill-mode: both
+      animation-name: fadeIn
 </style>
