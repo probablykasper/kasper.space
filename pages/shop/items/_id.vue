@@ -180,6 +180,12 @@ $svg-width: 28px
   img
     margin: auto
     max-width: 100%
+    transition: opacity 0.2s ease
+    @keyframes fadeIn
+      0%
+        opacity: 0
+      100%
+        opacity: 1
     &[lazy='loaded']
       animation-duration: 500ms
       animation-fill-mode: both
