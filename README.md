@@ -42,3 +42,7 @@ Lint and fix fixable errors/warnings:
 ```
 $ npm run lint-fix
 ```
+
+### Adding items to shop
+
+To add an image to the Shop, place it in the `/static/shop/items` folder. Resize the images to 500x500 (e.g using macOS Preview), and then convert it to a 95% quality jpg.
