@@ -129,7 +129,7 @@ $svg-width: 28px
     a
       display: inline-block
       position: relative
-      padding: 3px
+      padding-bottom: 3px
       color: #ebebef
       font-weight: bold
       .text

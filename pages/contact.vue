@@ -34,7 +34,7 @@ a, b
 a
   display: inline-block
   position: relative
-  padding: 3px
+  padding-bottom: 3px
   .text
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
     display: inline-block
