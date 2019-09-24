@@ -21,7 +21,7 @@ export default {
     document.documentElement.style.pointerEvents = 'none'
   },
   mounted() {
-    setTimeout(() => {
+    const hideSplash = () => {
       document.documentElement.style.pointerEvents = ''
       this.hasLoaded = true
       const event = document.createEvent('HTMLEvents')
@@ -31,6 +31,11 @@ export default {
       setTimeout(() => {
         this.hidden = true
       }, 500)
+    }
+    setTimeout(() => {
+      // wait for fonts to load if possible
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(hideSplash)
+      else hideSplash()
     }, 1000)
   },
 }
