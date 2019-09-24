@@ -27,7 +27,7 @@ export default {
 .page-container
   white-space: pre-wrap
 p
-  max-width: 340px
+  max-width: 370px
 a, b
   color: #ebebef
   font-weight: bold

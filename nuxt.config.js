@@ -31,7 +31,7 @@ export default {
   },
   // Customize the progress-bar color
   loading: { color: '#ffffff' },
-  loadingIndicator: '~/assets/loading.html',
+  loadingIndicator: '@/assets/loading.html',
   // Global CSS
   css: [
     '@/assets/fonts/stylesheet.css',
@@ -70,6 +70,7 @@ export default {
   },
   // Build configuration
   build: {
+    extractCSS: true,
     // You can extend webpack config here
     extend(config, ctx) {
       if (ctx.isClient) config.devtool = 'source-map'
