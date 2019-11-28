@@ -48,7 +48,7 @@ export default {
           },
           {
             thumbnailText: 'kasper.space',
-            text: 'Personal Website',
+            text: 'Personal website',
             url: 'https://github.com/probablykasper/v6.kasper.space',
           },
           {
@@ -58,7 +58,7 @@ export default {
           },
           {
             thumbnailText: 'lacuna.to',
-            text: 'Lacuna Website',
+            text: 'Lacuna website',
             url: 'https://github.com/probablykasper/lacuna.to-website',
           },
         ],
