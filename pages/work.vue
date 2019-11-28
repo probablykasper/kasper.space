@@ -76,6 +76,11 @@ export default {
           },
           {
             text: 'Lyric video',
+            url: 'https://www.youtube.com/watch?v=IAyxwC8SJ1c',
+            src: require('~/assets/thumbnails/video/solong.jpg'),
+          },
+          {
+            text: 'Lyric video',
             url: 'https://www.youtube.com/watch?v=kuNi2UAxQBk',
             src: require('~/assets/thumbnails/video/redlight.jpg'),
           },
@@ -85,19 +90,14 @@ export default {
             src: require('~/assets/thumbnails/video/theway.jpg'),
           },
           {
-            text: 'Audio visualizer',
-            url: 'https://www.youtube.com/watch?v=220KhlKu7Ds',
-            src: require('~/assets/thumbnails/video/shrive3.jpg'),
-          },
-          {
             text: 'Lyric video',
             url: 'https://www.youtube.com/watch?v=QtpqqhEVbww',
             src: require('~/assets/thumbnails/video/riseup.jpg'),
           },
           {
-            text: 'Cover art ani,mation',
-            url: 'https://www.youtube.com/watch?v=HPycLyk_1Tk',
-            src: require('~/assets/thumbnails/video/madeoftime.jpg'),
+            text: 'Audio visualizer',
+            url: 'https://www.youtube.com/watch?v=220KhlKu7Ds',
+            src: require('~/assets/thumbnails/video/shrive3.jpg'),
           },
         ],
       },
