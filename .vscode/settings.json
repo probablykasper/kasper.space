@@ -1,22 +1,12 @@
 // VSCode's formatter does not work well with Vue, so instead we use ESLint's autofix on save.
 {
-	"eslint.validate": [{
-			"language": "vue",
-			"autoFix": true
-		},
-		{
-			"language": "javascript",
-			"autoFix": true
-		},
-		{
-			"language": "javascriptreact",
-			"autoFix": true
-		}
-	],
-	"eslint.autoFixOnSave": true,
+	"eslint.validate": ["vue", "javascript", "javascriptreact"],
 	"editor.formatOnSave": false,
 	"vetur.validation.template": false,
   "files.associations": {
     "**/.vscode/settings.json": "jsonc"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
