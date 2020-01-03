@@ -81,8 +81,8 @@ export default {
           },
           {
             text: 'Lyric video',
-            url: 'https://www.youtube.com/watch?v=kuNi2UAxQBk',
-            src: require('~/assets/thumbnails/video/redlight.jpg'),
+            url: 'https://www.youtube.com/watch?v=-w9dE9p2gI8',
+            src: require('~/assets/thumbnails/video/punished.jpg'),
           },
           {
             text: 'Cover art animation',
@@ -91,8 +91,8 @@ export default {
           },
           {
             text: 'Lyric video',
-            url: 'https://www.youtube.com/watch?v=QtpqqhEVbww',
-            src: require('~/assets/thumbnails/video/riseup.jpg'),
+            url: 'https://www.youtube.com/watch?v=kuNi2UAxQBk',
+            src: require('~/assets/thumbnails/video/redlight.jpg'),
           },
           {
             text: 'Audio visualizer',
