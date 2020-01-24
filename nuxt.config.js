@@ -54,6 +54,7 @@ export default {
     '@nuxtjs/eslint-module',
   ],
   generate: {
+    fallback: true,
     routes() {
       const fs = require('fs')
       const routes = []
