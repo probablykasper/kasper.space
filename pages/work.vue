@@ -52,9 +52,9 @@ export default {
             url: 'https://github.com/probablykasper/v6.kasper.space',
           },
           {
-            thumbnailText: 'limp',
-            text: 'Programming language, made just for fun',
-            url: 'https://github.com/probablykasper/limp',
+            thumbnailText: 'cpc',
+            text: 'Text calculator with units and conversion',
+            url: 'https://github.com/probablykasper/cpc',
           },
           {
             thumbnailText: 'lacuna.to',
