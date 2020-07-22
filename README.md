@@ -4,6 +4,10 @@
 
 v6 of my personal website
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/probablykasper/v6.kasper.space/master/Screenshot.png">
+</p>
+
 ## Dev Instructions
 
 ### Get started
