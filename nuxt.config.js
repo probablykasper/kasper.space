@@ -7,13 +7,13 @@ export default {
     title: process.env.npm_package_name || '',
     link: [
       // favicon stuff:
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=hydrozoans' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=hydrozoans' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=hydrozoans' },
-      { rel: 'manifest', href: '/site.webmanifest?v=hydrozoans' },
-      { rel: 'shortcut icon', href: '/favicon.ico?v=hydrozoans' },
-      { rel: 'msapplication-TileColor', content: '#000000' },
-      { rel: 'theme-color', content: '#000000' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=nectophore' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=nectophore' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=nectophore' },
+      { rel: 'manifest', href: '/site.webmanifest?v=nectophore' },
+      { rel: 'shortcut icon', href: '/favicon.ico?v=nectophore' },
+      { name: 'msapplication-TileColor', content: '#000000' },
+      { name: 'theme-color', content: '#000000' },
     ],
     meta: [
       { charset: 'utf-8' },
