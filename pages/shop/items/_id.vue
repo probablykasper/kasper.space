@@ -1,5 +1,6 @@
 <template lang='pug'>
-  .page-container
+  //- .page-container
+  div
     CenterView
       .top
         .previous(:class='{disabled: !previousId}')
