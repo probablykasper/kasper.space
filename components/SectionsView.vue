@@ -11,8 +11,8 @@ div
         YouTubeIcon
       Button.button(v-if='section.title === "Lacuna"' text='Website' url='https://lacuna.to')
         LacunaIcon
-      Button.button(v-if='section.title === "Cover Art"' text='Shop' url='/shop')
-        ShopIcon
+      Button.button(v-if='section.title === "Cover Art"' text='See More' url='/art')
+        ArtIcon
 
       SectionsViewItems(:section='section' :sectionId='`section-${index}`' :itemAos='itemAos' :itemAosDuration='itemAosDuration' :itemAosConstant='itemAosConstant')
 </template>
@@ -23,7 +23,7 @@ import Button from '~/components/Button.vue'
 import GitHubIcon from '~/assets/icons/github.svg'
 import YouTubeIcon from '~/assets/icons/youtube.svg'
 import LacunaIcon from '~/assets/icons/lacuna.svg'
-import ShopIcon from '~/assets/icons/shop.svg'
+import ArtIcon from '~/assets/icons/art.svg'
 
 export default {
   components: {
@@ -32,7 +32,7 @@ export default {
     GitHubIcon,
     YouTubeIcon,
     LacunaIcon,
-    ShopIcon,
+    ArtIcon,
   },
   props: {
     sections: {

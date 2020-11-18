@@ -9,7 +9,7 @@ import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
   head: {
-    title: 'Shop - kasper.space',
+    title: 'Art - kasper.space',
   },
   components: {
     SectionsView,
@@ -18,12 +18,12 @@ export default {
     return {
       sections: [
         {
-          title: 'Cover Art Shop',
+          title: 'Art',
           align: 'center',
-          description: '',
+          description: 'If find any of these interesting, feel free to contact me',
           type: 'square-images-all',
           items: (function() {
-            const images = require.context('~/static/shop/items/', true, /\.jpg$/)
+            const images = require.context('~/static/art/items/', true, /\.jpg$/)
             const imagePaths = Array.from(images.keys())
             const fileExt = '.jpg'
             const ids = imagePaths.map((value) => {
@@ -34,8 +34,8 @@ export default {
               return b - a
             })
             const items = ids.map(value => ({
-              url: '/shop/items/' + value,
-              src: require('~/static/shop/items/' + value + fileExt),
+              url: '/art/items/' + value,
+              src: require('~/static/art/items/' + value + fileExt),
             }))
             return items
           })(),

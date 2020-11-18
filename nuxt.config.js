@@ -60,10 +60,10 @@ export default {
       const fs = require('fs')
       const routes = []
       const fileExt = '.jpg'
-      fs.readdirSync('./static/shop/items').forEach((filename) => {
+      fs.readdirSync('./static/art/items').forEach((filename) => {
         if (filename.endsWith(fileExt)) {
           routes.push({
-            route: `/shop/items/` + filename.slice(0, -fileExt.length),
+            route: `/art/items/` + filename.slice(0, -fileExt.length),
           })
         }
       })

@@ -7,9 +7,9 @@
       nuxt-link.work(to='/work')
         .outline
         .title Work
-      nuxt-link.shop(to='/shop')
+      nuxt-link.art(to='/art')
         .outline
-        .title Shop
+        .title Art
       nuxt-link.contact(to='/contact')
         .outline
         .title Contact
@@ -70,7 +70,7 @@ export default {
       &.work .outline
         background: linear-gradient(-45deg, #89216b, #C68A67, #89216b, #C68A67)
         background-size: 300% 300%
-      &.shop .outline
+      &.art .outline
         background-image: linear-gradient(-45deg, #9F4DF6, #6BBEF8, #9F4DF6, #6BBEF8)
         background-size: 300% 300%
       &.contact .outline

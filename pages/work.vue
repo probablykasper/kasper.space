@@ -144,7 +144,7 @@ export default {
       {
         title: 'Cover Art',
         align: 'right',
-        description: 'I make cover art from time to time. You can purchase covers from my Shop.',
+        description: "I've made cover art a couple times. Some of them look pretty alright.",
         type: 'square-images',
         items: [
           {
@@ -168,15 +168,15 @@ export default {
             src: require('~/assets/thumbnails/cover-art/voldex-colorblind-feat-cluda.jpg'),
           },
           {
-            url: '/shop',
+            url: '/art',
             src: require('~/assets/thumbnails/cover-art/backblur-1.jpg'),
           },
           {
-            url: '/shop',
+            url: '/art',
             src: require('~/assets/thumbnails/cover-art/snow-forest.jpg'),
           },
           {
-            url: '/shop',
+            url: '/art',
             src: require('~/assets/thumbnails/cover-art/starweb-2.jpg'),
           },
         ],

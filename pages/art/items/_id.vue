@@ -6,17 +6,15 @@
         .previous(:class='{disabled: !previousId}')
           nuxt-link(
             :is='previousId ? "nuxt-link" : "a"'
-            :to='previousId ? "/shop/items/" + previousId : null'
+            :to='previousId ? "/art/items/" + previousId : null'
           )
             ChevronIcon(data-aos='fade' data-aos-duration='200' data-aos-delay='0')
         .text-container
           h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0') {{title}}
-          p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
-            | Please contact me at #[a(href='mailto:kasperkh.kh@gmail.com') #[.text kasperkh.kh@gmail.com]] if you're interested in the cover.
         .next(:class='{disabled: !nextId}')
           nuxt-link(
             :is='nextId ? "nuxt-link" : "a"'
-            :to='nextId ? "/shop/items/" + nextId : null'
+            :to='nextId ? "/art/items/" + nextId : null'
           )
             ChevronIcon(data-aos='fade' data-aos-duration='200' data-aos-delay='0')
       .image-container(data-aos='fade-up' data-aos-duration='650' data-aos-delay='0')
@@ -41,7 +39,7 @@ export default {
     ChevronIcon,
   },
   data() {
-    const images = require.context('~/static/shop/items/', true, /\.jpg$/)
+    const images = require.context('~/static/art/items/', true, /\.jpg$/)
     const imagePaths = Array.from(images.keys())
     const fileExt = '.jpg'
     const ids = imagePaths.map((value) => {
@@ -63,7 +61,7 @@ export default {
       backgroundGradient: 'linear-gradient(to bottom right, #000000, #000000)',
       id: this.$route.params.id,
       title: 'Cover Art ' + this.$route.params.id,
-      imageSrc: '/shop/items/' + this.$route.params.id + '.jpg',
+      imageSrc: '/art/items/' + this.$route.params.id + '.jpg',
       previousId,
       nextId,
     }
