@@ -32,14 +32,14 @@ export default {
         type: 'text-only',
         items: [
           {
+            thumbnailText: 'cpc',
+            text: 'Text calculator with units and conversion',
+            url: 'https://github.com/probablykasper/cpc',
+          },
+          {
             thumbnailText: 'vidl',
             text: 'Script for downloading video/audio',
             url: 'https://github.com/probablykasper/vidl',
-          },
-          {
-            thumbnailText: 'Notifier',
-            text: 'Mobile app for scheduling notifications',
-            url: 'https://github.com/probablykasper/notifier',
           },
           {
             thumbnailText: 'Taskler',
@@ -47,19 +47,19 @@ export default {
             url: 'https://github.com/probablykasper/taskler',
           },
           {
+            thumbnailText: 'embler',
+            text: 'App packager',
+            url: 'https://github.com/probablykasper/embler',
+          },
+          {
+            thumbnailText: 'Notifier',
+            text: 'Mobile app for scheduling notifications',
+            url: 'https://github.com/probablykasper/notifier',
+          },
+          {
             thumbnailText: 'kasper.space',
             text: 'Personal website',
             url: 'https://github.com/probablykasper/v6.kasper.space',
-          },
-          {
-            thumbnailText: 'cpc',
-            text: 'Text calculator with units and conversion',
-            url: 'https://github.com/probablykasper/cpc',
-          },
-          {
-            thumbnailText: 'lacuna.to',
-            text: 'Lacuna website',
-            url: 'https://github.com/probablykasper/lacuna.to-website',
           },
         ],
       },
@@ -73,11 +73,6 @@ export default {
             text: 'Cover art animation',
             url: 'https://www.youtube.com/watch?v=-YeJpzqKNdE',
             src: require('~/assets/thumbnails/video/surrender.jpg'),
-          },
-          {
-            text: 'Lyric video',
-            url: 'https://www.youtube.com/watch?v=IAyxwC8SJ1c',
-            src: require('~/assets/thumbnails/video/solong.jpg'),
           },
           {
             text: 'Lyric video',
@@ -96,8 +91,13 @@ export default {
           },
           {
             text: 'Audio visualizer',
-            url: 'https://www.youtube.com/watch?v=220KhlKu7Ds',
-            src: require('~/assets/thumbnails/video/shrive3.jpg'),
+            url: 'https://www.youtube.com/watch?v=WtjThsN15Os',
+            src: require('~/assets/thumbnails/video/shrive-particles-1.4.jpg'),
+          },
+          {
+            text: 'Lyric video',
+            url: 'https://www.youtube.com/watch?v=IAyxwC8SJ1c',
+            src: require('~/assets/thumbnails/video/solong.jpg'),
           },
         ],
       },
@@ -108,36 +108,36 @@ export default {
         type: 'square-images',
         items: [
           {
-            url: 'https://open.spotify.com/track/1CTDxBkZT2d6K1EH5Og5Zh?si=qZst7rYpRxGu1DtETq0Nqg',
+            url: 'https://open.spotify.com/track/1CTDxBkZT2d6K1EH5Og5Zh',
             src: require('~/assets/thumbnails/lacuna/nemesis.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/4pOFfuADJgibXj590jvEMH?si=b4Ldn9qKQ5uCVqL1ORR_XA',
+            url: 'https://open.spotify.com/track/4pOFfuADJgibXj590jvEMH',
             src: require('~/assets/thumbnails/lacuna/saveme.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/4auEpBO2ghCyqV7jpjLUOu?si=l9VdR4ysSbyDL0_hPg587A',
-            src: require('~/assets/thumbnails/lacuna/upintheair.jpg'),
+            url: 'https://open.spotify.com/track/3iGYB7LpA3NMjnUK6poO1h?si=I5P0Yep6Q66Z81QonCja8g',
+            src: require('~/assets/thumbnails/lacuna/pill.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/0qyrp5gh4IkvkqKhTka3A6?si=rU4oDoe-SpOF1t5CBM6N6Q',
-            src: require('~/assets/thumbnails/lacuna/tropicallove.jpg'),
-          },
-          {
-            url: 'https://open.spotify.com/track/6gfwabuRxYE2o7GKDD1blM?si=KSpmDJE4TqyzdKfiRq0F0Q',
+            url: 'https://open.spotify.com/track/6gfwabuRxYE2o7GKDD1blM',
             src: require('~/assets/thumbnails/lacuna/redlight.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/6imlZarWNOvWZ8JNW8P7PH?si=sfx5XypqRYiScK5iNXdI9g',
-            src: require('~/assets/thumbnails/lacuna/promises.jpg'),
+            url: 'https://open.spotify.com/track/4auEpBO2ghCyqV7jpjLUOu',
+            src: require('~/assets/thumbnails/lacuna/upintheair.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/535Ndjl54kHrQ0rCDTIDQL?si=j0OTcqlpTMe0qIy9xiPZsA',
+            url: 'https://open.spotify.com/track/3NPwNhdEBcBIkArIcPZWJH',
+            src: require('~/assets/thumbnails/lacuna/slide.jpg'),
+          },
+          {
+            url: 'https://open.spotify.com/track/535Ndjl54kHrQ0rCDTIDQL',
             src: require('~/assets/thumbnails/lacuna/crazyforyou.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/2Z3cBIZVUjwqDRelSUU2JO?si=DR1uWWT5SCqbr0R28m_RBQ',
-            src: require('~/assets/thumbnails/lacuna/home.jpg'),
+            url: 'https://open.spotify.com/track/0qyrp5gh4IkvkqKhTka3A6',
+            src: require('~/assets/thumbnails/lacuna/tropicallove.jpg'),
           },
         ],
       },

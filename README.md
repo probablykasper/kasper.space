@@ -26,25 +26,25 @@ The master branch is continually deployed through [Netlify](https://netlify.com)
 Start dev server:
 
 ```
-$ npm run start
+npm run start
 ```
 
 Build into /dist:
 
 ```
-$ npm run build
+npm run build
 ```
 
 Lint the project:
 
 ```
-$ npm run lint
+npm run lint
 ```
 
 Lint and fix fixable errors/warnings:
 
 ```
-$ npm run lint-fix
+npm run lint-fix
 ```
 
 ### Adding artworks
