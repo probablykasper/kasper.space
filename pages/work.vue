@@ -28,7 +28,7 @@ export default {
       {
         title: 'Development',
         align: 'left',
-        description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, CSS, JavaScript, jQuery, Vue.js, Node.js, Python, MySQL, MongoDB, Docker and more.",
+        description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, CSS, JavaScript, jQuery, Vue.js, Svelte, Node.js, Python, MySQL, MongoDB, Docker and more.",
         type: 'text-only',
         items: [
           {
@@ -66,7 +66,7 @@ export default {
       {
         title: 'Video',
         align: 'right',
-        description: 'I have made several audio visualizers and lyric videos, as well as over 60 cover art animations for Lowly, a record label with 400 000 YouTube subscribers.',
+        description: 'I have made several audio visualizers and lyric videos, as well as over 60 cover art animations for Lowly, a record label with 500 000 YouTube subscribers.',
         type: 'images',
         items: [
           {
