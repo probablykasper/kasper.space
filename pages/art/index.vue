@@ -20,7 +20,7 @@ export default {
         {
           title: 'Art',
           align: 'center',
-          description: 'If find any of these interesting, feel free to contact me',
+          description: 'If you find any of these interesting, feel free to contact me',
           type: 'square-images-all',
           items: (function() {
             const images = require.context('~/static/art/items/', true, /\.jpg$/)
