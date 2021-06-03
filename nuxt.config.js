@@ -45,11 +45,7 @@ export default {
     { src: '@/plugins/vue-lazyload.js', ssr: false },
   ],
   // Nuxt.js modules
-  modules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-145975820-1',
-    }],
-  ],
+  modules: [],
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
