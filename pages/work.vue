@@ -28,7 +28,7 @@ export default {
       {
         title: 'Development',
         align: 'left',
-        description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, CSS, JavaScript, jQuery, Vue.js, Svelte, Node.js, Python, MySQL, MongoDB, Docker and more.",
+        description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, Pug, CSS, Sass, JavaScript, Svelte, Vue.js, Node.js, Tauri, Electron, browser extensions, Rust, Python, Flutter/Dart, MongoDB, Docker, PHP, MySQL and more.",
         type: 'text-only',
         items: [
           {
