@@ -28,7 +28,7 @@ export default {
       {
         title: 'Development',
         align: 'left',
-        description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, Pug, CSS, Sass, JavaScript, Svelte, Vue.js, Node.js, Tauri, Electron, browser extensions, Rust, Python, Flutter/Dart, MongoDB, Docker, PHP, MySQL and more.",
+        description: "I've worked on several personal projects, and I pay a lot of attention to design. I'm experienced with HTML, Pug, CSS, Sass, JavaScript, Svelte, Vue.js, Node.js, Tauri, Electron, browser extensions, Rust, Python, Flutter/Dart, MongoDB, Docker, PHP, MySQL and more",
         type: 'text-only',
         items: [
           {
@@ -66,7 +66,7 @@ export default {
       {
         title: 'Video',
         align: 'right',
-        description: 'I have made several audio visualizers and lyric videos, as well as over 60 cover art animations for Lowly, a record label with 500 000 YouTube subscribers.',
+        description: 'I have made several audio visualizers and lyric videos, as well as over 60 cover art animations for Lowly, a record label with 500 000 YouTube subscribers',
         type: 'images',
         items: [
           {
@@ -104,7 +104,7 @@ export default {
       {
         title: 'Lacuna',
         align: 'left',
-        description: 'Lacuna is an independent record label I co-run. Our music has over ten million plays across Spotify, Apple Music and YouTube.',
+        description: 'Lacuna is an independent record label I co-run. Our music has over ten million plays across Spotify, Apple Music and YouTube',
         type: 'square-images',
         items: [
           {
@@ -144,7 +144,7 @@ export default {
       {
         title: 'Cover Art',
         align: 'right',
-        description: "I've made cover art a couple times. Some of them look pretty alright.",
+        description: "I've made a couple cover artworks. Some of them look pretty alright",
         type: 'square-images',
         items: [
           {
