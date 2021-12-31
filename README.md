@@ -1,7 +1,5 @@
 # v6.kasper.space
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c9f7d228-db14-4dc5-97f2-7a2e25675b65/deploy-status)](https://app.netlify.com/sites/kasper-space/deploys)
-
 v6 of my personal website
 
 <p align="center">
