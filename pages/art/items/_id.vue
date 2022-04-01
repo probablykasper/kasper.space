@@ -84,6 +84,7 @@ export default {
 </script>
 
 <style lang='sass' scoped>
+@use 'sass:math'
 
 $svg-container-size: 50px
 $svg-width: 28px
@@ -161,7 +162,7 @@ $svg-width: 28px
     display: block
     content: ""
     width: 100%
-    padding-top: ($height / $width) * 100%
+    padding-top: math.div($height, $width) * 100%
   > img, > div
     position: absolute
     top: 0

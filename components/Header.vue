@@ -84,7 +84,7 @@ export default {
         right: 0
         bottom: 0
         animation: gradient-animation 3s linear infinite
-        $x: 2px;
+        $x: 2px
         clip-path: polygon(0% 100%, $x 100%, $x $x, calc(100% - #{$x}) $x, calc(100% - #{$x}) calc(100% - #{$x}), $x calc(100% - #{$x}), $x 100%, 100% 100%, 100% 0%, 0% 0%)
         border-radius: 2px
         transition-property: all
@@ -93,7 +93,7 @@ export default {
         transform: rotate(.00001deg)
       &.nuxt-link-active .outline
         opacity: 1
-        outline: 1px solid transparent;
+        outline: 1px solid transparent
       &:hover
         transform: scale(1.1)
         .title

@@ -3,7 +3,6 @@
     :is='isNuxtLink(url) ? "nuxt-link" : "a"'
     :to='isNuxtLink(url) ? url : null'
     :href='url'
-    :target='isNuxtLink(url) ? null : "_blank"'
     :rel='isNuxtLink(url) ? null : "noopener noreferrer"'
     data-aos='fade'
     data-aos-duration='800'
@@ -35,6 +34,8 @@ export default {
 </script>
 
 <style lang='sass'>
+@use 'sass:math'
+
 .button-container
   display: inline-block
   user-select: none
@@ -67,10 +68,10 @@ export default {
     transition-duration: 0.2s
     transition-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
     opacity: 0
-    transform: translate(0%, -50%) translateX(#{-$svg-size/2}) translateX(#{ -$spacing }) translate(-150%, 100%) scale(0.5)
+    transform: translate(0%, -50%) translateX(#{math.div(-$svg-size, 2)}) translateX(#{ -$spacing }) translate(-150%, 100%) scale(0.5)
   &:hover svg
     opacity: 1
-    transform: translate(0%, -50%) translateX(#{-$svg-size/2}) translateX(#{ -$spacing })
+    transform: translate(0%, -50%) translateX(#{math.div(-$svg-size, 2)}) translateX(#{ -$spacing })
   .text
     transition-property: opacity, transform
     transition-duration: 0.2s
@@ -78,5 +79,5 @@ export default {
     opacity: 0.7
   &:hover .text
     opacity: 1
-    transform: translateX(#{ $svg-size/2 })
+    transform: translateX(#{ math.div($svg-size, 2) })
 </style>

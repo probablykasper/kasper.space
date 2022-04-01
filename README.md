@@ -21,29 +21,10 @@ The master branch is continually deployed through [Netlify](https://netlify.com)
 
 ### Commands
 
-Start dev server:
-
-```
-npm run start
-```
-
-Build into /dist:
-
-```
-npm run build
-```
-
-Lint the project:
-
-```
-npm run lint
-```
-
-Lint and fix fixable errors/warnings:
-
-```
-npm run lint-fix
-```
+- `npm run dev`: Start in dev mode
+- `npm run build`: Build into `dist` folder
+- `npm run lint`: Lint
+- `npm run format`: Format
 
 ### Adding artworks
 

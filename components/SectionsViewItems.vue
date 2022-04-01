@@ -5,7 +5,6 @@
         :is='isNuxtLink(item.url) ? "nuxt-link" : "a"'
         :to='isNuxtLink(item.url) ? item.url : null'
         :href='item.url'
-        :target='isNuxtLink(item.url) ? null : "_blank"'
         :rel='isNuxtLink(item.url) ? null : "noopener noreferrer"'
         :class='section.type'
         :data-aos='itemAos'
@@ -52,6 +51,7 @@ export default {
 </script>
 
 <style lang='sass' scoped>
+@use 'sass:math'
 
 @mixin aspect-ratio($width, $height)
   position: relative
@@ -60,7 +60,7 @@ export default {
     display: block
     content: ""
     width: 100%
-    padding-top: ($height / $width) * 100%
+    padding-top: math.div($height, $width) * 100%
   > img, > div
     position: absolute
     top: 0
