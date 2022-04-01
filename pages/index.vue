@@ -30,11 +30,11 @@ export default {
     InstagramIcon,
     LinkedInIcon,
   },
-  mounted() {
-    EventBus.$emit('page-background-remove', '#000000')
-  },
   head: {
     title: 'kasper.space',
+  },
+  mounted() {
+    EventBus.$emit('page-background-remove', '#000000')
   },
 }
 </script>

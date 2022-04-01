@@ -61,6 +61,11 @@ export default {
       nextId,
     }
   },
+  head() {
+    return {
+      title: this.title + ' - kasper.space',
+    }
+  },
   created() {
     this.getBackgroundGradient()
   },
@@ -74,11 +79,6 @@ export default {
         EventBus.$emit('page-background-update', background)
       })
     },
-  },
-  head() {
-    return {
-      title: this.title + ' - kasper.space',
-    }
   },
 }
 </script>
