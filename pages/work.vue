@@ -180,11 +180,11 @@ export default {
       },
     ],
   }),
-  head: {
-    title: 'Work - kasper.space',
-  },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head: {
+    title: 'Work - kasper.space',
   },
 }
 </script>

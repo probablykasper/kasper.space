@@ -40,11 +40,11 @@ export default {
       ],
     }
   },
-  head: {
-    title: 'Art - kasper.space',
-  },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head: {
+    title: 'Art - kasper.space',
   },
 }
 </script>

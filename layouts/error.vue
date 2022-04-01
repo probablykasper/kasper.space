@@ -20,13 +20,13 @@ export default {
       message: (this.error && this.error.message) ? this.error.message : 'Error',
     }
   },
+  mounted() {
+    EventBus.$emit('page-background-remove', '#000000')
+  },
   head() {
     return {
       title: this.statusCode + ' - kasper.space',
     }
-  },
-  mounted() {
-    EventBus.$emit('page-background-remove', '#000000')
   },
 }
 </script>

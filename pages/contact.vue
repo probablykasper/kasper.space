@@ -14,11 +14,11 @@ export default {
   components: {
     CenterView,
   },
-  head: {
-    title: 'Contact - kasper.space',
-  },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head: {
+    title: 'Contact - kasper.space',
   },
 }
 </script>
