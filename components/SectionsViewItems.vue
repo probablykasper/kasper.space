@@ -121,7 +121,7 @@ $margin: 13px
         opacity: 0.7
         padding: 18% 0px
         text-align: center
-        font-size: 28px
+        font-size: 26px
         @media screen and (max-width: 500px)
           font-size: 5.5vw
 
