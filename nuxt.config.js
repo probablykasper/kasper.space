@@ -59,7 +59,7 @@ export default {
       fs.readdirSync('./static/art/items').forEach((filename) => {
         if (filename.endsWith(fileExt)) {
           routes.push({
-            route: `/art/items/` + filename.slice(0, -fileExt.length),
+            route: '/art/items/' + filename.slice(0, -fileExt.length),
           })
         }
       })
