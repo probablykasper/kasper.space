@@ -23,9 +23,6 @@ import InstagramIcon from '~/assets/icons/instagram.svg'
 import LinkedInIcon from '~/assets/icons/linkedin.svg'
 
 export default {
-  head: {
-    title: 'kasper.space',
-  },
   components: {
     CenterView,
     TwitterIcon,
@@ -35,6 +32,9 @@ export default {
   },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head: {
+    title: 'kasper.space',
   },
 }
 </script>

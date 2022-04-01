@@ -11,11 +11,6 @@ import CenterView from '~/components/CenterView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
-  head() {
-    return {
-      title: this.statusCode + ' - kasper.space',
-    }
-  },
   components: {
     CenterView,
   },
@@ -27,6 +22,11 @@ export default {
   },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head() {
+    return {
+      title: this.statusCode + ' - kasper.space',
+    }
   },
 }
 </script>

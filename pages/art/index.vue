@@ -8,9 +8,6 @@ import SectionsView from '~/components/SectionsView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
-  head: {
-    title: 'Art - kasper.space',
-  },
   components: {
     SectionsView,
   },
@@ -45,6 +42,9 @@ export default {
   },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head: {
+    title: 'Art - kasper.space',
   },
 }
 </script>

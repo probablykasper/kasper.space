@@ -10,9 +10,6 @@ import BackgroundGradient from '~/components/BackgroundGradient.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
-  head: {
-    title: 'Work - kasper.space',
-  },
   components: {
     SectionsView,
     BackgroundGradient,
@@ -185,6 +182,9 @@ export default {
   }),
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
+  },
+  head: {
+    title: 'Work - kasper.space',
   },
 }
 </script>
