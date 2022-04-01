@@ -11,11 +11,6 @@ import CenterView from '~/components/CenterView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
-  head() {
-    return {
-      title: this.statusCode + ' - kasper.space',
-    }
-  },
   components: {
     CenterView,
   },
@@ -23,6 +18,11 @@ export default {
     return {
       statusCode: this.error,
       message: (this.error && this.error.message) ? this.error.message : 'Error',
+    }
+  },
+  head() {
+    return {
+      title: this.statusCode + ' - kasper.space',
     }
   },
   mounted() {

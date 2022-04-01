@@ -29,11 +29,6 @@ import ChevronIcon from '~/assets/icons/chevron.svg'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
-  head() {
-    return {
-      title: this.title + ' - kasper.space',
-    }
-  },
   components: {
     CenterView,
     ChevronIcon,
@@ -64,6 +59,11 @@ export default {
       imageSrc: '/art/items/' + this.$route.params.id + '.jpg',
       previousId,
       nextId,
+    }
+  },
+  head() {
+    return {
+      title: this.title + ' - kasper.space',
     }
   },
   created() {

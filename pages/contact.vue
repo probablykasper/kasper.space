@@ -11,11 +11,11 @@ import CenterView from '~/components/CenterView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
-  head: {
-    title: 'Contact - kasper.space',
-  },
   components: {
     CenterView,
+  },
+  head: {
+    title: 'Contact - kasper.space',
   },
   mounted() {
     EventBus.$emit('page-background-remove', '#000000')
