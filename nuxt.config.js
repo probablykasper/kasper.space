@@ -1,7 +1,8 @@
 import { basename } from 'path'
 
 export default {
-  mode: 'spa',
+  ssr: false,
+  target: 'static',
   // Headers of the page
   head: {
     title: process.env.npm_package_name || '',
