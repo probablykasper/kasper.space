@@ -29,6 +29,11 @@ import ChevronIcon from '~/assets/icons/chevron.svg'
 import { EventBus } from '~/plugins/event-bus.js'
 
 export default {
+  head() {
+    return {
+      title: this.title + ' - kasper.space',
+    }
+  },
   components: {
     CenterView,
     ChevronIcon,
@@ -74,11 +79,6 @@ export default {
         EventBus.$emit('page-background-update', background)
       })
     },
-  },
-  head() {
-    return {
-      title: this.title + ' - kasper.space',
-    }
   },
 }
 </script>
