@@ -32,7 +32,7 @@ export default {
             })
             const items = ids.map(value => ({
               url: '/art/items/' + value,
-              src: require('~/static/art/items/' + value + fileExt),
+              src: '/art/items/' + value + fileExt,
             }))
             return items
           })(),

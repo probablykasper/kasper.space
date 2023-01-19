@@ -79,19 +79,6 @@ export default {
         {
           test: /\.svg$/,
           loader: 'vue-svg-loader',
-          options: {
-            svgo: {
-              plugins: [
-                {
-                  prefixIds: { // make sure IDs are unique
-                    prefix: (node, { path }) => basename(path, '.svg'),
-                    delim: '-',
-                  },
-                },
-                { cleanupIDs: false }, // prevent IDs from being removed
-              ],
-            },
-          },
         },
       )
     },
