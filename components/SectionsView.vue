@@ -14,7 +14,7 @@ div
       Button.button(v-if='section.title === "Cover Art"' text='See More' url='/art')
         ArtIcon
 
-      SectionsViewItems(:section='section' :sectionId='`section-${index}`' :itemAos='itemAos' :itemAosDuration='itemAosDuration' :itemAosConstant='itemAosConstant')
+      SectionsViewItems(:section='section' :sectionId='`section-${index}`' :itemAos='itemAos' :itemAosAddedDelay='itemAosAddedDelay')
 </template>
 
 <script>
@@ -43,11 +43,7 @@ export default {
       type: String,
       required: true,
     },
-    itemAosDuration: {
-      type: Number,
-      required: true,
-    },
-    itemAosConstant: {
+    itemAosAddedDelay: {
       type: Number,
       required: true,
     },

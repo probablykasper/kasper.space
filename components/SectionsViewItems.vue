@@ -9,7 +9,7 @@
         :class='section.type'
         :data-aos='itemAos'
         :data-aos-duration='650'
-        :data-aos-delay='itemAosConstant+index*itemAosDuration'
+        :data-aos-delay='index*itemAosAddedDelay'
         :data-aos-anchor='`#${sectionId} .items`'
       )
         .card-container(:class='section.type')
@@ -33,11 +33,7 @@ export default {
       type: String,
       required: true,
     },
-    itemAosDuration: {
-      type: Number,
-      required: true,
-    },
-    itemAosConstant: {
+    itemAosAddedDelay: {
       type: Number,
       required: true,
     },
