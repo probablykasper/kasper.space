@@ -5,7 +5,6 @@ export default {
   target: 'static',
   // Headers of the page
   head: {
-    title: process.env.npm_package_name || '',
     link: [
       // favicon stuff:
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=nectophore' },
