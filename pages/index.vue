@@ -3,13 +3,13 @@
     h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | Kasper Henningsen
     .icons
-      a(href='https://twitter.com/probablykasper' data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
+      a(href='https://twitter.com/probablykasper' aria-label="Twitter" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
         TwitterIcon
-      a(href='https://github.com/probablykasper' data-aos='zoom-out' data-aos-duration='750' data-aos-delay='150')
+      a(href='https://github.com/probablykasper' aria-label="GitHub" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='150')
         GitHubIcon
-      a(href='https://instagram.com/probablykasper' data-aos='zoom-out' data-aos-duration='750' data-aos-delay='200')
+      a(href='https://instagram.com/probablykasper' aria-label="Instagram" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='200')
         InstagramIcon
-      a(href='https://www.linkedin.com/in/kasper-henningsen' data-aos='zoom-out' data-aos-duration='750' data-aos-delay='250')
+      a(href='https://www.linkedin.com/in/kasper-henningsen' aria-label="LinkedIn" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='250')
         LinkedInIcon
 </template>
 

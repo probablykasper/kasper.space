@@ -1,6 +1,6 @@
 <template lang='pug'>
   .header
-    nuxt-link(to='/')
+    nuxt-link(to='/' aria-label="Home")
       //- svg.logo(src='~/assets/logo/2019 Filled.svg')
       LogoFilled.logo
     .navbar

@@ -3,6 +3,7 @@
     :is='isNuxtLink(url) ? "nuxt-link" : "a"'
     :to='isNuxtLink(url) ? url : null'
     :href='url'
+    :aria-label='text'
     :rel='isNuxtLink(url) ? null : "noopener noreferrer"'
     data-aos='fade'
     data-aos-duration='800'
