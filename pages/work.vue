@@ -101,7 +101,7 @@ export default {
       {
         title: 'Lacuna',
         align: 'left',
-        description: 'Lacuna is an independent record label I co-run. Our music has over ten million plays across Spotify, Apple Music and YouTube',
+        description: 'Lacuna is an independent record label I co-run. Our music has over 100 million plays across Spotify, Apple Music and YouTube',
         type: 'square-images',
         items: [
           {
