@@ -145,23 +145,23 @@ export default {
         type: 'square-images',
         items: [
           {
-            url: 'https://open.spotify.com/track/4m4SB61NXgwmfZm37incal?si=HztNWM0aSiyTICviSj4lIg',
+            url: 'https://open.spotify.com/album/2czQ3WJUaiiO6b44V4YrUY',
             src: require('~/assets/thumbnails/cover-art/serion-x-dabl-catch-you-in-my-arms.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/6O2DrzgrHG5GrXX4pihPlW?si=r9oDt-EVSEukCF2d2HYSfQ',
+            url: 'https://open.spotify.com/album/52SPyP0SVN1eTw6MEO2ISt',
             src: require('~/assets/thumbnails/cover-art/barren-gates-x-serion-deep-within.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/6mZIHwepGYSSrdeJCSNXZi?si=FrCvhi0cRSuFumQlcCO5tw',
+            url: 'https://open.spotify.com/album/6h2fmNObUGGSTsUcQzylFF',
             src: require('~/assets/thumbnails/cover-art/serion-x-lotis-in-the-end.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/5c9O1rlHCNqyJGFVeMN6V2?si=pSHPpEZ2TWa-I5DcEirtyA',
+            url: 'https://open.spotify.com/album/2gS0CfbtfRNnjNw6YoU0BJ',
             src: require('~/assets/thumbnails/cover-art/serion-broken.jpg'),
           },
           {
-            url: 'https://open.spotify.com/track/3ju2YEKOQikMgetgj53xUJ?si=YXqZDFQgQDaLXNRr8a8QrQ',
+            url: 'https://open.spotify.com/album/5TO7rmNjw5DgJSIu3VSAzn',
             src: require('~/assets/thumbnails/cover-art/voldex-colorblind-feat-cluda.jpg'),
           },
           {
