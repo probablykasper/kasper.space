@@ -165,8 +165,8 @@ export default {
             src: require('~/assets/thumbnails/cover-art/voldex-colorblind-feat-cluda.jpg'),
           },
           {
-            url: '/art',
-            src: require('~/assets/thumbnails/cover-art/backblur-1.jpg'),
+            url: 'https://open.spotify.com/album/6MKDbprP8y4yjinjp6TsKv',
+            src: require('~/assets/thumbnails/cover-art/abstract-painted-night-sky.jpg'),
           },
           {
             url: '/art',
