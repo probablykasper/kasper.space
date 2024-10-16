@@ -25,7 +25,7 @@ export default {
       {
         title: 'Development',
         align: 'left',
-        description: "I make websites, desktop apps, browser extensions, mobile apps and various utilities and libraries.\nI'm experienced with Svelte, Rust, Tauri, HTML, Pug, CSS, Sass, JavaScript, TypeScript, Vue.js, Node.js, Electron, Flutter, MongoDB, SQL and more",
+        description: "I make websites, desktop apps, browser extensions and various utilities and libraries.\nI'm experienced with Svelte, Rust, Tauri, HTML, Pug, CSS, Sass, TypeScript, Node.js, Electron, SQL and more",
         type: 'text-only',
         items: [
           {
