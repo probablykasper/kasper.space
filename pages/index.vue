@@ -3,6 +3,8 @@
     h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | Kasper Henningsen
     .icons
+      a(href='https://bsky.app/kasper.space' aria-label="BlueSky" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
+        BlueSkyIcon
       a(href='https://twitter.com/probablykasper' aria-label="Twitter" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
         TwitterIcon
       a(href='https://github.com/probablykasper' aria-label="GitHub" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='150')
@@ -17,6 +19,7 @@
 import CenterView from '~/components/CenterView.vue'
 import { EventBus } from '~/plugins/event-bus.js'
 
+import BlueSkyIcon from '~/assets/icons/bluesky.svg'
 import TwitterIcon from '~/assets/icons/twitter.svg'
 import GitHubIcon from '~/assets/icons/github.svg'
 import InstagramIcon from '~/assets/icons/instagram.svg'
@@ -25,6 +28,7 @@ import LinkedInIcon from '~/assets/icons/linkedin.svg'
 export default {
   components: {
     CenterView,
+    BlueSkyIcon,
     TwitterIcon,
     GitHubIcon,
     InstagramIcon,
@@ -46,6 +50,7 @@ export default {
       margin: 0px 8px
       display: inline-block
       svg
+        width: 22px
         height: 22px
         transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         padding: 10px
