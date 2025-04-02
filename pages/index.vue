@@ -3,7 +3,7 @@
     h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | Kasper Henningsen
     .icons
-      a(href='https://bsky.app/kasper.space' aria-label="BlueSky" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
+      a(href='https://bsky.app/profile/kasper.space' aria-label="BlueSky" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
         BlueSkyIcon
       a(href='https://twitter.com/probablykasper' aria-label="Twitter" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
         TwitterIcon
