@@ -31,12 +31,12 @@ export default {
           {
             thumbnailText: 'cpc',
             text: 'Text calculator with units & conversion',
-            url: 'https://github.com/probablykasper/cpc',
+            url: 'https://cpc.kasper.space/',
           },
           {
             thumbnailText: 'Kadium',
             text: 'App for staying ontop of YouTube uploads',
-            url: 'https://github.com/probablykasper/kadium',
+            url: 'https://kadium.kasper.space',
           },
           {
             thumbnailText: 'Limey',
