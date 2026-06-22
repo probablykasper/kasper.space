@@ -7,8 +7,8 @@
         BlueSkyIcon
       a(href='https://github.com/probablykasper' aria-label="GitHub" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='150')
         GitHubIcon
-      a(href='https://twitter.com/probablykasper' aria-label="Twitter" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
-        TwitterIcon
+      a(href='https://www.youtube.com/@probablykasper/videos' aria-label="YouTube" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
+        YouTubeIcon
       a(href='https://instagram.com/probablykasper' aria-label="Instagram" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='200')
         InstagramIcon
       a(href='https://www.linkedin.com/in/kasper-henningsen' aria-label="LinkedIn" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='250')
@@ -21,7 +21,7 @@ import { EventBus } from '~/plugins/event-bus.js'
 
 import BlueSkyIcon from '~/assets/icons/bluesky.svg'
 import GitHubIcon from '~/assets/icons/github.svg'
-import TwitterIcon from '~/assets/icons/twitter.svg'
+import YouTubeIcon from '~/assets/icons/youtube.svg'
 import InstagramIcon from '~/assets/icons/instagram.svg'
 import LinkedInIcon from '~/assets/icons/linkedin.svg'
 
@@ -30,7 +30,7 @@ export default {
     CenterView,
     BlueSkyIcon,
     GitHubIcon,
-    TwitterIcon,
+    YouTubeIcon,
     InstagramIcon,
     LinkedInIcon,
   },

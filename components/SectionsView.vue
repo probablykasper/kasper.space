@@ -7,7 +7,7 @@ div
       p.section-description(:data-aos='getAOS("description", section.align)' data-aos-duration='800' data-aos-delay='100' :data-aos-anchor='`#section-${index}`') {{section.description}}
       Button.button(v-if='section.title === "Development"' text='GitHub' url='https://github.com/probablykasper')
         GitHubIcon
-      Button.button(v-if='section.title === "Video"' text='See More' url='https://www.youtube.com/playlist?list=PL84-DNDSU8p5WP6jA7hvOCV9dIKBNjdCS')
+      Button.button(v-if='section.title === "Video"' text='YouTube' url='https://www.youtube.com/playlist?list=PL84-DNDSU8p5WP6jA7hvOCV9dIKBNjdCS')
         YouTubeIcon
       Button.button(v-if='section.title === "Lacuna"' text='Website' url='https://lacuna.to')
         LacunaIcon
