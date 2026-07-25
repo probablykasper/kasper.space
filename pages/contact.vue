@@ -3,7 +3,7 @@
     h1(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
       | Contact
     p(data-aos='zoom-out' data-aos-duration='750' data-aos-delay='0')
-      | You can reach me at #[a(href='mailto:kasperkh.kh@gmail.com') #[.text kasperkh.kh@gmail.com]], <b>Kasper#6452</b> on Discord or on #[a(href='https://facebook.com/probablykasper') #[.text Facebook]].
+      | You can reach me at #[a(href='mailto:kasper9n@gmail.com') #[.text kasper9n@gmail.com]], <b>kasper9n</b> on Discord or on #[a(href='https://facebook.com/kasper9n') #[.text Facebook]].
 </template>
 
 <script>

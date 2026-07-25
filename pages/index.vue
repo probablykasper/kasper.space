@@ -5,11 +5,11 @@
     .icons
       a(href='https://bsky.app/profile/kasper.space' aria-label="BlueSky" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
         BlueSkyIcon
-      a(href='https://github.com/probablykasper' aria-label="GitHub" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='150')
+      a(href='https://github.com/kasper9n' aria-label="GitHub" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='150')
         GitHubIcon
-      a(href='https://www.youtube.com/@probablykasper/videos' aria-label="YouTube" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
+      a(href='https://www.youtube.com/@kasper9n/videos' aria-label="YouTube" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='100')
         YouTubeIcon
-      a(href='https://instagram.com/probablykasper' aria-label="Instagram" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='200')
+      a(href='https://instagram.com/kasper9n' aria-label="Instagram" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='200')
         InstagramIcon
       a(href='https://www.linkedin.com/in/kasper-henningsen' aria-label="LinkedIn" data-aos='zoom-out' data-aos-duration='750' data-aos-delay='250')
         LinkedInIcon

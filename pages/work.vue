@@ -56,7 +56,7 @@ export default {
           {
             thumbnailText: 'Thumbnail Grabber',
             text: 'Thumbnail downloader extension',
-            url: 'https://github.com/probablykasper/thumbnail-grabber',
+            url: 'https://github.com/kasper9n/thumbnail-grabber',
           },
         ],
       },
