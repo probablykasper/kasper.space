@@ -17,7 +17,7 @@ export default {
     ],
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width' },
       { hid: 'description', name: 'description', content: "Norwegian software developer, VFX artist, record label manager and mammal" },
       // favicon stuff:
       { name: 'msapplication-TileColor', content: '#000000' },
